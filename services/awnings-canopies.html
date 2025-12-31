@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awnings & Canopies | Commercial Shade Solutions | Kindle Sign Company</title>
+    <meta name="description" content="Custom commercial awnings & canopies for storefronts, restaurants & businesses in Bucks County & Philadelphia. Illuminated, retractable & branded options. Free quotes: 866-358-9892">
+    <meta name="keywords" content="commercial awnings, storefront awnings, canopies, illuminated awnings, retractable awnings, business awnings, Bucks County awnings">
+    <link rel="canonical" href="https://www.kindlesign.com/services/awnings-canopies/">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Commercial Awnings and Canopies",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Kindle Sign Company",
+            "telephone": "+1-866-358-9892"
+        },
+        "areaServed": ["Bucks County", "Philadelphia", "Montgomery County", "Delaware County"],
+        "description": "Custom commercial awnings and canopies including illuminated, retractable, and branded options for businesses."
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E85D04;
+            --primary-dark: #c94f00;
+            --dark: #141414;
+            --dark-2: #1a1a1a;
+            --dark-3: #222222;
+            --gray: #666666;
+            --gray-light: #999999;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --font-heading: 'Syne', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--white); color: var(--dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: var(--dark); transition: all 0.3s; }
+        .header.scrolled { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo img { height: 36px; width: auto; filter: brightness(0) invert(1); transition: filter 0.3s; }
+        .header.scrolled .logo img { filter: none; }
+        .nav { display: flex; align-items: center; gap: 1.5rem; }
+        .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+        .nav-links > li { position: relative; }
+        .nav-links > li > a { display: flex; align-items: center; gap: 0.25rem; padding: 0.5rem 0.75rem; font-size: 0.9375rem; font-weight: 500; color: var(--white); border-radius: 8px; transition: all 0.2s; }
+        .header.scrolled .nav-links > li > a { color: var(--dark); }
+        .nav-links > li > a:hover { background: rgba(255,255,255,0.1); }
+        .header.scrolled .nav-links > li > a:hover { background: var(--light); color: var(--primary); }
+        .nav-links > li > a svg { width: 14px; height: 14px; transition: transform 0.2s; }
+        .nav-links > li:hover > a svg { transform: rotate(180deg); }
+        .nav-dropdown { position: absolute; top: 100%; left: 0; min-width: 200px; background: var(--white); border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); padding: 0.5rem; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s; }
+        .nav-links > li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown a { display: block; padding: 0.5rem 0.875rem; font-size: 0.875rem; color: var(--dark); border-radius: 8px; transition: all 0.2s; }
+        .nav-dropdown a:hover { background: var(--light); color: var(--primary); }
+        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--white); }
+        .header.scrolled .nav-phone { color: var(--dark); }
+        .nav-phone svg { width: 18px; height: 18px; color: var(--primary); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-toggle span { width: 24px; height: 2px; background: var(--white); }
+        .header.scrolled .mobile-toggle span { background: var(--dark); }
+
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; transition: all 0.3s; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,93,4,0.3); }
+        .btn-white { background: var(--white); color: var(--dark); }
+        .btn-white:hover { background: var(--light); transform: translateY(-2px); }
+
+        .service-hero { padding: 10rem 0 6rem; background: var(--dark); position: relative; overflow: hidden; }
+        .service-hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 200%; background: radial-gradient(circle, rgba(232,93,4,0.08) 0%, transparent 60%); }
+        .service-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .service-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.875rem; color: var(--gray-light); }
+        .breadcrumb a { color: var(--gray-light); transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--primary); }
+        .breadcrumb svg { width: 14px; height: 14px; }
+        .service-hero h1 { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+        .service-hero h1 .highlight { color: var(--primary); }
+        .service-hero-text { font-size: 1.125rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 2rem; }
+        .service-hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .service-hero-visual { position: relative; }
+        .service-hero-image { width: 100%; aspect-ratio: 4/3; background: var(--dark-2); border-radius: 24px; display: flex; align-items: center; justify-content: center; }
+        .service-hero-image svg { width: 120px; height: 120px; color: var(--primary); opacity: 0.3; }
+        .service-hero-badge { position: absolute; bottom: -1rem; left: -1rem; background: var(--primary); color: var(--white); padding: 1rem 1.5rem; border-radius: 16px; font-weight: 700; box-shadow: 0 10px 40px rgba(232,93,4,0.4); }
+
+        .section-tag { display: inline-block; padding: 0.5rem 1rem; background: rgba(232,93,4,0.1); color: var(--primary); font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 100px; margin-bottom: 1rem; }
+        .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
+        .section-subtitle { font-size: 1.125rem; color: var(--gray); max-width: 600px; }
+
+        .types { padding: 6rem 0; background: var(--white); }
+        .types-header { text-align: center; margin-bottom: 4rem; }
+        .types-header .section-subtitle { margin: 0 auto; }
+        .types-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .type-card { background: var(--light); border-radius: 20px; padding: 2.5rem; transition: all 0.3s; position: relative; overflow: hidden; }
+        .type-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--primary); transform: scaleX(0); transition: transform 0.3s; }
+        .type-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .type-card:hover::before { transform: scaleX(1); }
+        .type-icon { width: 64px; height: 64px; background: var(--white); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .type-icon svg { width: 32px; height: 32px; color: var(--primary); }
+        .type-card h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .type-card p { color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; }
+        .type-features { list-style: none; }
+        .type-features li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; padding: 0.375rem 0; }
+        .type-features li svg { width: 18px; height: 18px; color: var(--primary); }
+
+        .benefits { padding: 6rem 0; background: var(--dark); }
+        .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .benefits-content .section-tag { background: rgba(232,93,4,0.15); }
+        .benefits-content .section-title { color: var(--white); }
+        .benefits-content .section-subtitle { color: rgba(255,255,255,0.7); margin-bottom: 2rem; }
+        .benefits-list { display: flex; flex-direction: column; gap: 1.25rem; }
+        .benefit-item { display: flex; gap: 1rem; align-items: flex-start; }
+        .benefit-icon { width: 48px; height: 48px; background: rgba(232,93,4,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .benefit-icon svg { width: 24px; height: 24px; color: var(--primary); }
+        .benefit-text h4 { font-size: 1.125rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+        .benefit-text p { color: rgba(255,255,255,0.6); font-size: 0.9375rem; }
+        .benefits-visual { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .benefits-stat { background: var(--dark-2); border-radius: 16px; padding: 2rem; text-align: center; transition: all 0.3s; }
+        .benefits-stat:hover { background: var(--dark-3); transform: translateY(-4px); }
+        .benefits-stat-number { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--primary); }
+        .benefits-stat-label { font-size: 0.875rem; color: var(--gray-light); margin-top: 0.25rem; }
+
+        .faq { padding: 6rem 0; background: var(--light); }
+        .faq-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; }
+        .faq-intro h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 1rem; }
+        .faq-intro p { color: var(--gray); margin-bottom: 1.5rem; }
+        .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .faq-item { background: var(--white); border-radius: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; text-align: left; font-family: var(--font-body); font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+        .faq-toggle { width: 32px; height: 32px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .faq-toggle svg { width: 14px; height: 14px; transition: transform 0.3s; }
+        .faq-item.active .faq-toggle { background: var(--primary); color: var(--white); }
+        .faq-item.active .faq-toggle svg { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+        .faq-item.active .faq-answer { max-height: 300px; }
+        .faq-answer-inner { padding: 0 1.5rem 1.25rem; color: var(--gray); line-height: 1.7; }
+        .faq-answer-inner a { color: var(--primary); text-decoration: underline; }
+
+        .related { padding: 6rem 0; background: var(--white); }
+        .related-header { text-align: center; margin-bottom: 4rem; }
+        .related-header .section-subtitle { margin: 0 auto; }
+        .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .related-card { background: var(--light); padding: 2rem; border-radius: 20px; transition: all 0.3s; display: block; }
+        .related-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .related-icon { width: 64px; height: 64px; background: var(--white); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; transition: all 0.3s; }
+        .related-card:hover .related-icon { background: var(--primary); }
+        .related-icon svg { width: 32px; height: 32px; color: var(--primary); transition: color 0.3s; }
+        .related-card:hover .related-icon svg { color: var(--white); }
+        .related-card h3 { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .related-card p { font-size: 0.9375rem; color: var(--gray); line-height: 1.7; margin-bottom: 1.25rem; }
+        .related-link { font-size: 0.9375rem; font-weight: 600; color: var(--primary); }
+
+        .cta { padding: 6rem 0; background: var(--light); }
+        .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .cta-content h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 1rem; }
+        .cta-content p { color: var(--gray); margin-bottom: 1.5rem; }
+        .cta-form { background: var(--white); padding: 2rem; border-radius: 20px; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.875rem 1rem; background: var(--light); border: 2px solid transparent; border-radius: 10px; font-family: var(--font-body); font-size: 1rem; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+
+        .footer { background: var(--dark); }
+        .footer-main { padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; }
+        .footer-brand p { color: var(--gray); margin: 1rem 0; font-size: 0.9375rem; }
+        .footer-brand .logo img { filter: brightness(0) invert(1); }
+        .footer-contact a { display: flex; align-items: center; gap: 0.5rem; color: var(--gray-light); font-size: 0.9375rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+        .footer-contact a:hover { color: var(--primary); }
+        .footer-contact svg { width: 18px; height: 18px; color: var(--primary); }
+        .footer-col h4 { font-size: 0.8125rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a { font-size: 0.875rem; color: var(--gray); transition: color 0.2s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--dark-3); display: flex; justify-content: space-between; align-items: center; }
+        .footer-copyright { font-size: 0.875rem; color: var(--gray); }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a { width: 40px; height: 40px; background: var(--dark-2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gray-light); transition: all 0.2s; }
+        .footer-social a:hover { background: var(--primary); color: var(--white); }
+        .footer-social svg { width: 18px; height: 18px; }
+
+        .floating-cta { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; opacity: 0; visibility: hidden; transform: translateY(20px) scale(0.8); transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .floating-cta.visible { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+        .floating-cta-btn { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: var(--primary); color: var(--white); border-radius: 100px; font-weight: 600; box-shadow: 0 10px 40px rgba(232,93,4,0.4); transition: all 0.3s; }
+        .floating-cta-btn:hover { background: var(--primary-dark); transform: translateY(-3px); }
+        .floating-cta-btn svg { width: 20px; height: 20px; }
+        .floating-cta-pulse { position: absolute; inset: 0; background: var(--primary); border-radius: 100px; animation: ctaPulse 2s ease-out infinite; z-index: -1; }
+        @keyframes ctaPulse { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.5); opacity: 0; } }
+
+        @media (max-width: 1024px) {
+            .service-hero-grid, .types-grid, .benefits-grid, .faq-grid, .cta-grid, .related-grid { grid-template-columns: 1fr; }
+            .types-grid, .related-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-phone { display: none; }
+            .mobile-toggle { display: flex; }
+            .service-hero { padding: 8rem 0 4rem; }
+            .types-grid, .benefits-visual, .related-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .floating-cta { bottom: 1.5rem; right: 1.5rem; }
+            .floating-cta-btn { padding: 1rem; }
+            .floating-cta-btn span:last-child { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo"><img src="../l__3_.jpg" alt="Kindle Sign Company"></a>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="/services/">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <a href="/services/channel-letters/">Channel Letters</a>
+                                <a href="/services/monument-signs/">Monument Signs</a>
+                                <a href="/services/pylon-signs/">Pylon Signs</a>
+                                <a href="/services/led-signs/">LED Signs</a>
+                                <a href="/services/awnings-canopies/">Awnings & Canopies</a>
+                                <a href="/services/vehicle-wraps/">Vehicle Wraps</a>
+                            </div>
+                        </li>
+                        <li><a href="/portfolio/">Portfolio</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                    <a href="tel:866-358-9892" class="nav-phone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        866-358-9892
+                    </a>
+                </nav>
+                <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <div class="container">
+                <div class="service-hero-grid">
+                    <div class="service-hero-content">
+                        <nav class="breadcrumb">
+                            <a href="/">Home</a>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                            <a href="/services/">Services</a>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                            <span>Awnings & Canopies</span>
+                        </nav>
+                        <h1><span class="highlight">Awnings & Canopies</span> For Every Business</h1>
+                        <p class="service-hero-text">Enhance your storefront with custom awnings and canopies. Protect customers from the elements while showcasing your brand with illuminated, retractable, and custom-printed shade solutions.</p>
+                        <div class="service-hero-cta">
+                            <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+                            <a href="tel:866-358-9892" class="btn btn-white">866-358-9892</a>
+                        </div>
+                    </div>
+                    <div class="service-hero-visual">
+                        <div class="service-hero-image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4v2H3V7z"/><path d="M5 9v9M19 9v9M3 18h18"/></svg>
+                        </div>
+                        <div class="service-hero-badge">Custom Branding</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="types">
+            <div class="container">
+                <div class="types-header">
+                    <span class="section-tag">Awning Types</span>
+                    <h2 class="section-title">Awning & Canopy Solutions</h2>
+                    <p class="section-subtitle">Choose from a variety of styles to match your building architecture and branding needs.</p>
+                </div>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4v2H3V7z"/><path d="M5 9v9M19 9v9"/></svg>
+                        </div>
+                        <h3>Traditional Fabric</h3>
+                        <p>Classic awning styles with printed graphics. Available in hundreds of colors and patterns for any storefront.</p>
+                        <ul class="type-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Sunbrella® fabrics</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Custom graphics & logos</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 10-year fabric warranty</li>
+                        </ul>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42"/></svg>
+                        </div>
+                        <h3>Illuminated Awnings</h3>
+                        <p>Backlit awnings that glow at night for 24/7 brand visibility and enhanced curb appeal.</p>
+                        <ul class="type-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> LED energy efficiency</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Day & night visibility</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Translucent fabric options</li>
+                        </ul>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 12l4 4M4 12l4-4"/></svg>
+                        </div>
+                        <h3>Retractable Awnings</h3>
+                        <p>Motorized or manual operation for flexible shade control. Perfect for restaurants with outdoor seating.</p>
+                        <ul class="type-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Motorized options</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Wind sensors available</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Extend outdoor seasons</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefits-content">
+                        <span class="section-tag">Benefits</span>
+                        <h2 class="section-title">More Than Just Shade</h2>
+                        <p class="section-subtitle">Commercial awnings deliver real business value beyond weather protection.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                                <div class="benefit-text">
+                                    <h4>Increased Foot Traffic</h4>
+                                    <p>Shaded entrances attract more customers, especially in hot weather.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                                <div class="benefit-text">
+                                    <h4>Energy Savings</h4>
+                                    <p>Reduce cooling costs by up to 25% by blocking direct sunlight.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                                <div class="benefit-text">
+                                    <h4>Brand Visibility</h4>
+                                    <p>Prominent display space for your logo and business name.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                                <div class="benefit-text">
+                                    <h4>Weather Protection</h4>
+                                    <p>Keep customers comfortable and merchandise protected.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits-visual">
+                        <div class="benefits-stat">
+                            <div class="benefits-stat-number">25%</div>
+                            <div class="benefits-stat-label">Energy Savings</div>
+                        </div>
+                        <div class="benefits-stat">
+                            <div class="benefits-stat-number">10 Yr</div>
+                            <div class="benefits-stat-label">Fabric Warranty</div>
+                        </div>
+                        <div class="benefits-stat">
+                            <div class="benefits-stat-number">500+</div>
+                            <div class="benefits-stat-label">Color Options</div>
+                        </div>
+                        <div class="benefits-stat">
+                            <div class="benefits-stat-number">24/7</div>
+                            <div class="benefits-stat-label">Illuminated Options</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <div class="faq-grid">
+                    <div class="faq-intro">
+                        <span class="section-tag">FAQ</span>
+                        <h2>Awning Questions</h2>
+                        <p>Common questions about commercial awnings and canopies.</p>
+                        <a href="tel:866-358-9892" class="btn btn-primary">866-358-9892</a>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">How much do commercial awnings cost?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Commercial awning pricing varies based on size, style, and features. Standard fabric awnings start around $1,500, while illuminated and retractable options range from $3,000 to $15,000+. We provide detailed quotes after measuring your space.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">How long do awnings last?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Quality commercial awning fabrics like <a href="https://www.sunbrella.com/" target="_blank" rel="noopener">Sunbrella®</a> typically last 8-10+ years with proper care. Frames can last 15-20+ years. We offer 10-year fabric warranties on premium materials.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Can awnings be customized with my logo?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Absolutely! We offer custom printing, vinyl graphics, and embroidered logos. Our graphic designers can help optimize your branding for maximum visibility on awning valances and panels.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Do awnings require permits?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Most municipalities require permits for commercial awnings. We handle all permitting for <a href="/locations/bucks-county-signs/">Bucks County</a>, <a href="/locations/philadelphia-signs/">Philadelphia</a>, and surrounding areas as part of our turnkey service.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">How do you clean and maintain awnings?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Regular brushing and occasional cleaning with mild soap and water keeps awnings looking great. We offer maintenance programs including cleaning, re-tensioning, and fabric replacement when needed.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related">
+            <div class="container">
+                <div class="related-header">
+                    <span class="section-tag">Related Services</span>
+                    <h2 class="section-title">Complete Your Storefront</h2>
+                    <p class="section-subtitle">Pair your awning with complementary signage for a cohesive brand presence.</p>
+                </div>
+                <div class="related-grid">
+                    <a href="/services/channel-letters/" class="related-card">
+                        <div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="10" rx="2"/></svg></div>
+                        <h3>Channel Letters</h3>
+                        <p>Add illuminated building signage above your awning for maximum brand visibility.</p>
+                        <span class="related-link">Learn More →</span>
+                    </a>
+                    <a href="/services/monument-signs/" class="related-card">
+                        <div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></div>
+                        <h3>Monument Signs</h3>
+                        <p>Complete your property identification with coordinated ground signage.</p>
+                        <span class="related-link">Learn More →</span>
+                    </a>
+                    <a href="/services/vehicle-wraps/" class="related-card">
+                        <div class="related-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg></div>
+                        <h3>Vehicle Wraps</h3>
+                        <p>Extend your brand presence with matching fleet graphics.</p>
+                        <span class="related-link">Learn More →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div class="container">
+                <div class="cta-grid">
+                    <div class="cta-content">
+                        <span class="section-tag">Get Started</span>
+                        <h2>Ready for Custom Awnings?</h2>
+                        <p>Get a free consultation and quote. We'll help you choose the perfect awning solution for your business.</p>
+                        <a href="tel:866-358-9892" class="btn btn-primary">Call 866-358-9892</a>
+                    </div>
+                    <div class="cta-form">
+                        <form>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" placeholder="(555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label>Project Details</label>
+                                <textarea placeholder="Tell us about your awning project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%">Get Free Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="tel:866-358-9892" class="floating-cta" id="floatingCta">
+        <span class="floating-cta-pulse"></span>
+        <span class="floating-cta-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>Call Now</span>
+        </span>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="/" class="logo"><img src="../l__3_.jpg" alt="Kindle Sign Company"></a>
+                        <p>Family-owned sign company in Langhorne PA since 2005. Custom signage from concept to installation.</p>
+                        <div class="footer-contact">
+                            <a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a>
+                            <a href="mailto:sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> sales@kindlesign.com</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="/services/channel-letters/">Channel Letters</a></li>
+                            <li><a href="/services/monument-signs/">Monument Signs</a></li>
+                            <li><a href="/services/pylon-signs/">Pylon Signs</a></li>
+                            <li><a href="/services/led-signs/">LED Signs</a></li>
+                            <li><a href="/services/awnings-canopies/">Awnings</a></li>
+                            <li><a href="/services/vehicle-wraps/">Vehicle Wraps</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Service Areas</h4>
+                        <ul>
+                            <li><a href="/locations/langhorne-signs/">Langhorne PA</a></li>
+                            <li><a href="/locations/bucks-county-signs/">Bucks County</a></li>
+                            <li><a href="/locations/philadelphia-signs/">Philadelphia</a></li>
+                            <li><a href="/locations/montgomery-county-signs/">Montgomery County</a></li>
+                            <li><a href="/locations/delaware-county-signs/">Delaware County</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="/about/">About Us</a></li>
+                            <li><a href="/portfolio/">Portfolio</a></li>
+                            <li><a href="/about/testimonials/">Reviews</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Kindle Sign Company | Langhorne PA</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/kindlesigncompany" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                    <a href="https://www.instagram.com/kindlesigncompany" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/kindle-sign-company" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('floatingCta').classList.toggle('visible', window.scrollY > 300);
+        });
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = btn.parentElement;
+                var isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(function(faq) { faq.classList.remove('active'); });
+                if (!isActive) item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

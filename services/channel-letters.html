@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Letters | Custom LED Channel Letter Signs | Kindle Sign Company</title>
+    <meta name="description" content="Custom channel letter signs for businesses in Bucks County, Philadelphia & beyond. Front-lit, back-lit & halo-lit options. Design, fabrication & installation. Free quotes: 866-358-9892">
+    <meta name="keywords" content="channel letters, channel letter signs, LED channel letters, illuminated signs, front lit channel letters, halo lit channel letters, business signs Bucks County">
+    <link rel="canonical" href="https://www.kindlesign.com/services/channel-letters/">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Channel Letter Signs",
+        "provider": {
+            "@type": "SignShop",
+            "name": "Kindle Sign Company",
+            "telephone": "+1-866-358-9892",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "116 N Bellevue Ave Suite 306",
+                "addressLocality": "Langhorne",
+                "addressRegion": "PA",
+                "postalCode": "19047"
+            }
+        },
+        "areaServed": ["Bucks County", "Philadelphia", "Montgomery County", "Delaware County"],
+        "description": "Custom channel letter signs including front-lit, back-lit, and halo-lit options for businesses."
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E85D04;
+            --primary-dark: #c94f00;
+            --black: #0a0a0a;
+            --dark: #141414;
+            --dark-2: #1a1a1a;
+            --dark-3: #222222;
+            --gray: #666666;
+            --gray-light: #999999;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --font-heading: 'Syne', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--white); color: var(--dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: var(--dark); transition: all 0.3s; }
+        .header.scrolled { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo img { height: 36px; width: auto; filter: brightness(0) invert(1); transition: filter 0.3s; }
+        .header.scrolled .logo img { filter: none; }
+        .nav { display: flex; align-items: center; gap: 1.5rem; }
+        .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+        .nav-links > li { position: relative; }
+        .nav-links > li > a { display: flex; align-items: center; gap: 0.25rem; padding: 0.5rem 0.75rem; font-size: 0.9375rem; font-weight: 500; color: var(--white); border-radius: 8px; transition: all 0.2s; }
+        .header.scrolled .nav-links > li > a { color: var(--dark); }
+        .nav-links > li > a:hover { background: rgba(255,255,255,0.1); }
+        .header.scrolled .nav-links > li > a:hover { background: var(--light); color: var(--primary); }
+        .nav-links > li > a svg { width: 14px; height: 14px; transition: transform 0.2s; }
+        .nav-links > li:hover > a svg { transform: rotate(180deg); }
+        .nav-dropdown { position: absolute; top: 100%; left: 0; min-width: 200px; background: var(--white); border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); padding: 0.5rem; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s; }
+        .nav-links > li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown a { display: block; padding: 0.5rem 0.875rem; font-size: 0.875rem; color: var(--dark); border-radius: 8px; transition: all 0.2s; }
+        .nav-dropdown a:hover { background: var(--light); color: var(--primary); }
+        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--white); }
+        .header.scrolled .nav-phone { color: var(--dark); }
+        .nav-phone svg { width: 18px; height: 18px; color: var(--primary); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-toggle span { width: 24px; height: 2px; background: var(--white); transition: background 0.3s; }
+        .header.scrolled .mobile-toggle span { background: var(--dark); }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; transition: all 0.3s; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,93,4,0.3); }
+        .btn-outline { background: transparent; border: 2px solid var(--dark); color: var(--dark); }
+        .btn-outline:hover { background: var(--dark); color: var(--white); }
+        .btn-white { background: var(--white); color: var(--dark); }
+        .btn-white:hover { background: var(--light); transform: translateY(-2px); }
+
+        /* Service Hero */
+        .service-hero { padding: 10rem 0 6rem; background: var(--dark); position: relative; overflow: hidden; }
+        .service-hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 200%; background: radial-gradient(circle, rgba(232,93,4,0.08) 0%, transparent 60%); pointer-events: none; }
+        .service-hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .service-hero-content { position: relative; z-index: 1; }
+        .breadcrumb { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.875rem; color: var(--gray-light); }
+        .breadcrumb a { color: var(--gray-light); transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--primary); }
+        .breadcrumb svg { width: 14px; height: 14px; }
+        .service-hero h1 { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+        .service-hero h1 .highlight { color: var(--primary); }
+        .service-hero-text { font-size: 1.125rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 2rem; }
+        .service-hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .service-hero-visual { position: relative; }
+        .service-hero-image { width: 100%; aspect-ratio: 4/3; background: var(--dark-2); border-radius: 24px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .service-hero-image svg { width: 120px; height: 120px; color: var(--primary); opacity: 0.3; }
+        .service-hero-badge { position: absolute; bottom: -1rem; left: -1rem; background: var(--primary); color: var(--white); padding: 1rem 1.5rem; border-radius: 16px; font-weight: 700; font-size: 1.125rem; box-shadow: 0 10px 40px rgba(232,93,4,0.4); }
+
+        /* Section Styles */
+        .section-tag { display: inline-block; padding: 0.5rem 1rem; background: rgba(232,93,4,0.1); color: var(--primary); font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 100px; margin-bottom: 1rem; }
+        .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
+        .section-subtitle { font-size: 1.125rem; color: var(--gray); max-width: 600px; }
+
+        /* Types Section */
+        .types { padding: 6rem 0; background: var(--white); }
+        .types-header { text-align: center; margin-bottom: 4rem; }
+        .types-header .section-subtitle { margin: 0 auto; }
+        .types-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .type-card { background: var(--light); border-radius: 20px; padding: 2.5rem; transition: all 0.3s; position: relative; overflow: hidden; }
+        .type-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--primary); transform: scaleX(0); transition: transform 0.3s; }
+        .type-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .type-card:hover::before { transform: scaleX(1); }
+        .type-icon { width: 64px; height: 64px; background: var(--white); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .type-icon svg { width: 32px; height: 32px; color: var(--primary); }
+        .type-card h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .type-card p { color: var(--gray); line-height: 1.7; margin-bottom: 1.5rem; }
+        .type-features { list-style: none; }
+        .type-features li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9375rem; color: var(--dark); padding: 0.375rem 0; }
+        .type-features li svg { width: 18px; height: 18px; color: var(--primary); flex-shrink: 0; }
+
+        /* Benefits Section */
+        .benefits { padding: 6rem 0; background: var(--dark); }
+        .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .benefits-content .section-tag { background: rgba(232,93,4,0.15); }
+        .benefits-content .section-title { color: var(--white); }
+        .benefits-content .section-subtitle { color: rgba(255,255,255,0.7); }
+        .benefits-list { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.25rem; }
+        .benefit-item { display: flex; gap: 1rem; align-items: flex-start; }
+        .benefit-icon { width: 48px; height: 48px; background: rgba(232,93,4,0.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .benefit-icon svg { width: 24px; height: 24px; color: var(--primary); }
+        .benefit-text h4 { font-size: 1.125rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+        .benefit-text p { color: rgba(255,255,255,0.6); font-size: 0.9375rem; }
+        .benefits-visual { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .benefits-stat { background: var(--dark-2); border-radius: 16px; padding: 2rem; text-align: center; transition: all 0.3s; }
+        .benefits-stat:hover { background: var(--dark-3); transform: translateY(-4px); }
+        .benefits-stat-number { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--primary); }
+        .benefits-stat-label { font-size: 0.875rem; color: var(--gray-light); margin-top: 0.25rem; }
+
+        /* Process Section */
+        .process { padding: 6rem 0; background: var(--light); }
+        .process-header { text-align: center; margin-bottom: 4rem; }
+        .process-header .section-subtitle { margin: 0 auto; }
+        .process-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
+        .process-timeline::before { content: ''; position: absolute; top: 40px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 100%); opacity: 0.3; }
+        .process-step { text-align: center; position: relative; }
+        .process-number { width: 80px; height: 80px; background: var(--white); border: 3px solid var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--primary); position: relative; z-index: 1; transition: all 0.3s; }
+        .process-step:hover .process-number { background: var(--primary); color: var(--white); transform: scale(1.1); }
+        .process-step h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .process-step p { font-size: 0.9375rem; color: var(--gray); line-height: 1.6; }
+
+        /* Gallery Section */
+        .gallery { padding: 6rem 0; background: var(--white); }
+        .gallery-header { text-align: center; margin-bottom: 4rem; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .gallery-item { aspect-ratio: 4/3; background: var(--light); border-radius: 16px; overflow: hidden; position: relative; cursor: pointer; }
+        .gallery-item::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; }
+        .gallery-item:hover::after { opacity: 1; }
+        .gallery-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--gray-light); font-size: 0.875rem; flex-direction: column; gap: 0.5rem; }
+        .gallery-placeholder svg { width: 32px; height: 32px; opacity: 0.5; }
+
+        /* FAQ */
+        .faq { padding: 6rem 0; background: var(--light); }
+        .faq-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; }
+        .faq-intro h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 1rem; }
+        .faq-intro p { color: var(--gray); margin-bottom: 1.5rem; }
+        .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .faq-item { background: var(--white); border-radius: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; text-align: left; font-family: var(--font-body); font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+        .faq-toggle { width: 32px; height: 32px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .faq-toggle svg { width: 14px; height: 14px; transition: transform 0.3s; }
+        .faq-item.active .faq-toggle { background: var(--primary); color: var(--white); }
+        .faq-item.active .faq-toggle svg { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s; }
+        .faq-item.active .faq-answer { max-height: 300px; }
+        .faq-answer-inner { padding: 0 1.5rem 1.25rem; color: var(--gray); line-height: 1.7; }
+
+        /* CTA */
+        .cta { padding: 6rem 0; background: var(--white); }
+        .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .cta-content h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; margin-bottom: 1rem; }
+        .cta-content p { color: var(--gray); margin-bottom: 1.5rem; }
+        .cta-form { background: var(--light); padding: 2rem; border-radius: 20px; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.875rem 1rem; background: var(--white); border: 2px solid transparent; border-radius: 10px; font-family: var(--font-body); font-size: 1rem; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--primary); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+
+        /* Footer */
+        .footer { background: var(--dark); }
+        .footer-main { padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; }
+        .footer-brand p { color: var(--gray); margin: 1rem 0; font-size: 0.9375rem; }
+        .footer-brand .logo img { filter: brightness(0) invert(1); }
+        .footer-contact a { display: flex; align-items: center; gap: 0.5rem; color: var(--gray-light); font-size: 0.9375rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+        .footer-contact a:hover { color: var(--primary); }
+        .footer-contact svg { width: 18px; height: 18px; color: var(--primary); }
+        .footer-col h4 { font-size: 0.8125rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a { font-size: 0.875rem; color: var(--gray); transition: color 0.2s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--dark-3); display: flex; justify-content: space-between; align-items: center; }
+        .footer-copyright { font-size: 0.875rem; color: var(--gray); }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a { width: 40px; height: 40px; background: var(--dark-2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gray-light); transition: all 0.2s; }
+        .footer-social a:hover { background: var(--primary); color: var(--white); }
+        .footer-social svg { width: 18px; height: 18px; }
+
+        /* Floating CTA */
+        .floating-cta { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; opacity: 0; visibility: hidden; transform: translateY(20px) scale(0.8); transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .floating-cta.visible { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+        .floating-cta-btn { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: var(--primary); color: var(--white); border-radius: 100px; font-weight: 600; box-shadow: 0 10px 40px rgba(232,93,4,0.4); transition: all 0.3s; }
+        .floating-cta-btn:hover { background: var(--primary-dark); transform: translateY(-3px); }
+        .floating-cta-btn svg { width: 20px; height: 20px; }
+        .floating-cta-pulse { position: absolute; inset: 0; background: var(--primary); border-radius: 100px; animation: ctaPulse 2s ease-out infinite; z-index: -1; }
+        @keyframes ctaPulse { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.5); opacity: 0; } }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .service-hero-grid, .types-grid, .benefits-grid, .process-timeline, .faq-grid, .cta-grid { grid-template-columns: 1fr; }
+            .types-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-timeline { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+            .process-timeline::before { display: none; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-phone { display: none; }
+            .mobile-toggle { display: flex; }
+            .service-hero { padding: 8rem 0 4rem; }
+            .types-grid, .gallery-grid { grid-template-columns: 1fr; }
+            .process-timeline { grid-template-columns: 1fr; }
+            .benefits-visual { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+            .floating-cta { bottom: 1.5rem; right: 1.5rem; }
+            .floating-cta-btn { padding: 1rem; }
+            .floating-cta-btn span:last-child { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo"><img src="../l__3_.jpg" alt="Kindle Sign Company"></a>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="/services/">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <a href="/services/channel-letters/">Channel Letters</a>
+                                <a href="/services/monument-signs/">Monument Signs</a>
+                                <a href="/services/pylon-signs/">Pylon Signs</a>
+                                <a href="/services/led-signs/">LED Signs</a>
+                                <a href="/services/awnings-canopies/">Awnings & Canopies</a>
+                                <a href="/services/vehicle-wraps/">Vehicle Wraps</a>
+                            </div>
+                        </li>
+                        <li><a href="/portfolio/">Portfolio</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                    <a href="tel:866-358-9892" class="nav-phone">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        866-358-9892
+                    </a>
+                </nav>
+                <button class="mobile-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <div class="container">
+                <div class="service-hero-grid">
+                    <div class="service-hero-content">
+                        <nav class="breadcrumb">
+                            <a href="/">Home</a>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                            <a href="/services/">Services</a>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                            <span>Channel Letters</span>
+                        </nav>
+                        <h1><span class="highlight">Channel Letters</span> That Command Attention</h1>
+                        <p class="service-hero-text">Make your business impossible to miss with custom channel letter signs. From front-lit brilliance to elegant halo-lit effects, we design, fabricate, and install signage that elevates your brand presence day and night.</p>
+                        <div class="service-hero-cta">
+                            <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+                            <a href="tel:866-358-9892" class="btn btn-white">866-358-9892</a>
+                        </div>
+                    </div>
+                    <div class="service-hero-visual">
+                        <div class="service-hero-image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h.01M10 11h.01M14 11h.01M18 11h.01"/></svg>
+                        </div>
+                        <div class="service-hero-badge">20+ Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="types">
+            <div class="container">
+                <div class="types-header">
+                    <span class="section-tag">Sign Types</span>
+                    <h2 class="section-title">Channel Letter Options</h2>
+                    <p class="section-subtitle">Choose the illumination style that best represents your brand and meets your visibility needs.</p>
+                </div>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                        </div>
+                        <h3>Front-Lit</h3>
+                        <p>Maximum visibility with illuminated letter faces. The most popular choice for retail and commercial businesses.</p>
+                        <ul class="type-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Brightest option available</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Excellent day & night visibility</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Wide color selection</li>
+                        </ul>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                        </div>
+                        <h3>Halo-Lit (Backlit)</h3>
+                        <p>Sophisticated glow effect with light projecting behind the letters. Perfect for upscale branding.</p>
+                        <ul class="type-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Elegant halo glow effect</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Premium brand appearance</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Subtle, refined aesthetic</li>
+                        </ul>
+                    </div>
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3>Front & Back Lit</h3>
+                        <p>The best of both worlds—maximum impact with illuminated faces and a stunning halo effect.</p>
+                        <ul class="type-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ultimate visibility</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dramatic visual impact</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dual illumination options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefits-content">
+                        <span class="section-tag">Why Choose Us</span>
+                        <h2 class="section-title">Built to Last, Designed to Impress</h2>
+                        <p class="section-subtitle">Our channel letters combine premium materials with expert craftsmanship for signage that performs for years.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Premium Materials</h4>
+                                    <p>Aircraft-grade aluminum, polycarbonate faces, and UL-listed LEDs.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Energy Efficient LEDs</h4>
+                                    <p>Save up to 80% on energy costs compared to traditional neon lighting.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>Expert Installation</h4>
+                                    <p>Licensed, insured crews handle permitting and professional mounting.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <div class="benefit-text">
+                                    <h4>5-Year Warranty</h4>
+                                    <p>Peace of mind with comprehensive coverage on materials and labor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits-visual">
+                        <div class="benefits-stat">
+                            <div class="benefits-stat-number">50K+</div>
+                            <div class="benefits-stat-label">Hours LED Lifespan</div>
+                        </div>
+                        <div class="benefits-stat">
+                            <div class="benefits-stat-number">80%</div>
+                            <div class="benefits-stat-label">Energy Savings</div>
+                        </div>
+                        <div class="benefits-stat">
+                            <div class="benefits-stat-number">100+</div>
+                            <div class="benefits-stat-label">Color Options</div>
+                        </div>
+                        <div class="benefits-stat">
+                            <div class="benefits-stat-number">5 Yr</div>
+                            <div class="benefits-stat-label">Warranty</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <div class="process-header">
+                    <span class="section-tag">Our Process</span>
+                    <h2 class="section-title">From Concept to Installation</h2>
+                    <p class="section-subtitle">We handle every step so you can focus on your business.</p>
+                </div>
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h3>Consultation</h3>
+                        <p>Free site visit to assess needs, take measurements, and discuss your vision and budget.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h3>Design</h3>
+                        <p>Custom mockups showing exactly how your channel letters will look on your building.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h3>Fabrication</h3>
+                        <p>Precision manufacturing in our facility using premium materials and quality controls.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h3>Installation</h3>
+                        <p>Professional mounting by licensed crews. We handle all permits and inspections.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-header">
+                    <span class="section-tag">Our Work</span>
+                    <h2 class="section-title">Channel Letter Projects</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Project Photo</div></div>
+                    <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Project Photo</div></div>
+                    <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Project Photo</div></div>
+                    <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Project Photo</div></div>
+                    <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Project Photo</div></div>
+                    <div class="gallery-item"><div class="gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>Project Photo</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <div class="faq-grid">
+                    <div class="faq-intro">
+                        <span class="section-tag">FAQ</span>
+                        <h2>Channel Letter Questions</h2>
+                        <p>Common questions about our channel letter signs. Don't see your question? Give us a call.</p>
+                        <a href="tel:866-358-9892" class="btn btn-primary">866-358-9892</a>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">How much do channel letters cost?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Channel letter pricing varies based on size, quantity, illumination type, and installation complexity. Most projects range from $3,000 to $15,000+. We provide detailed quotes after assessing your specific needs.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">How long do channel letters last?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">With proper installation and quality materials, channel letters last 10-15+ years. LED modules typically offer 50,000+ hours of operation. We offer a 5-year warranty on all channel letter installations.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Do I need a permit for channel letters?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Yes, most municipalities require sign permits. We handle all permitting for Bucks County, Montgomery County, Philadelphia, and surrounding areas as part of our turnkey service.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">What's the production timeline?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Typical channel letter projects take 4-6 weeks from design approval to installation. Rush orders may be available. Permitting timelines vary by municipality and can add 2-4 weeks.</div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question">Can you match my brand colors?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+                            <div class="faq-answer"><div class="faq-answer-inner">Absolutely! We can match virtually any PMS or brand color. Provide your brand guidelines and we'll create channel letters that perfectly represent your business identity.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div class="container">
+                <div class="cta-grid">
+                    <div class="cta-content">
+                        <span class="section-tag">Get Started</span>
+                        <h2>Ready for Custom Channel Letters?</h2>
+                        <p>Get a free consultation and quote from Bucks County's trusted sign experts. We'll help you choose the perfect channel letter solution for your business.</p>
+                        <a href="tel:866-358-9892" class="btn btn-primary">Call 866-358-9892</a>
+                    </div>
+                    <div class="cta-form">
+                        <form>
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" placeholder="(555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label>Project Details</label>
+                                <textarea placeholder="Tell us about your channel letter project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width:100%">Get Free Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="tel:866-358-9892" class="floating-cta" id="floatingCta">
+        <span class="floating-cta-pulse"></span>
+        <span class="floating-cta-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>Call Now</span>
+        </span>
+    </a>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="/" class="logo"><img src="../l__3_.jpg" alt="Kindle Sign Company"></a>
+                        <p>Family-owned sign company in Langhorne PA since 2005. Custom signage from concept to installation.</p>
+                        <div class="footer-contact">
+                            <a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a>
+                            <a href="mailto:sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> sales@kindlesign.com</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="/services/channel-letters/">Channel Letters</a></li>
+                            <li><a href="/services/monument-signs/">Monument Signs</a></li>
+                            <li><a href="/services/pylon-signs/">Pylon Signs</a></li>
+                            <li><a href="/services/led-signs/">LED Signs</a></li>
+                            <li><a href="/services/awnings-canopies/">Awnings</a></li>
+                            <li><a href="/services/vehicle-wraps/">Vehicle Wraps</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Service Areas</h4>
+                        <ul>
+                            <li><a href="/locations/langhorne-signs/">Langhorne PA</a></li>
+                            <li><a href="/locations/bucks-county-signs/">Bucks County</a></li>
+                            <li><a href="/locations/philadelphia-signs/">Philadelphia</a></li>
+                            <li><a href="/locations/montgomery-county-signs/">Montgomery County</a></li>
+                            <li><a href="/locations/delaware-county-signs/">Delaware County</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="/about/">About Us</a></li>
+                            <li><a href="/portfolio/">Portfolio</a></li>
+                            <li><a href="/about/testimonials/">Reviews</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Kindle Sign Company | Langhorne PA</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/kindlesigncompany" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+                    <a href="https://www.instagram.com/kindlesigncompany" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/kindle-sign-company" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll
+        window.addEventListener('scroll', function() {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('floatingCta').classList.toggle('visible', window.scrollY > 300);
+        });
+        
+        // FAQ
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = btn.parentElement;
+                var isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(function(faq) { faq.classList.remove('active'); });
+                if (!isActive) item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

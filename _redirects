@@ -1,0 +1,23 @@
+# Netlify Redirects - Clean URLs (no .html extensions)
+
+# Service pages - pretty URLs
+/services/channel-letters      /services/channel-letters.html    200
+/services/monument-signs       /services/monument-signs.html     200
+/services/pylon-signs          /services/pylon-signs.html        200
+/services/led-signs            /services/led-signs.html          200
+/services/awnings-canopies     /services/awnings-canopies.html   200
+/services/vehicle-wraps        /services/vehicle-wraps.html      200
+
+# Trailing slash versions
+/services/channel-letters/     /services/channel-letters.html    200
+/services/monument-signs/      /services/monument-signs.html     200
+/services/pylon-signs/         /services/pylon-signs.html        200
+/services/led-signs/           /services/led-signs.html          200
+/services/awnings-canopies/    /services/awnings-canopies.html   200
+/services/vehicle-wraps/       /services/vehicle-wraps.html      200
+
+# Future pages
+/services                      /index.html                        200
+/portfolio                     /index.html                        200
+/about                         /index.html                        200
+/contact                       /index.html                        200
