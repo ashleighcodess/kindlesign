@@ -66,6 +66,15 @@
         .nav-links > li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
         .nav-dropdown a { display: block; padding: 0.5rem 0.875rem; font-size: 0.875rem; color: var(--dark); border-radius: 8px; transition: all 0.2s; }
         .nav-dropdown a:hover { background: var(--light); color: var(--primary); }
+        .nav-dropdown-label { padding: 0.5rem 0.875rem 0.25rem; font-size: 0.6875rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.1em; }
+        .nav-dropdown-divider { height: 1px; background: var(--light); margin: 0.5rem; }
+        .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); width: 650px; background: var(--white); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); padding: 1.5rem; opacity: 0; visibility: hidden; transition: all 0.2s; }
+        .nav-links > li:hover .nav-mega { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .nav-mega-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .nav-mega-col h4 { font-size: 0.6875rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--light); }
+        .nav-mega-col ul { list-style: none; }
+        .nav-mega-col a { display: block; padding: 0.375rem 0; font-size: 0.875rem; color: var(--dark); transition: all 0.2s; }
+        .nav-mega-col a:hover { color: var(--primary); padding-left: 0.5rem; }
         .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--white); }
         .header.scrolled .nav-phone { color: var(--dark); }
         .nav-phone svg { width: 18px; height: 18px; color: var(--primary); }
@@ -225,23 +234,59 @@
                     <ul class="nav-links">
                         <li>
                             <a href="/services/">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
-                            <div class="nav-dropdown">
-                                <a href="/services/channel-letters/">Channel Letters</a>
-                                <a href="/services/monument-signs/">Monument Signs</a>
-                                <a href="/services/pylon-signs/">Pylon Signs</a>
-                                <a href="/services/led-signs/">LED Signs</a>
-                                <a href="/services/awnings-canopies/">Awnings & Canopies</a>
-                                <a href="/services/vehicle-wraps/">Vehicle Wraps</a>
+                            <div class="nav-mega">
+                                <div class="nav-mega-grid">
+                                    <div class="nav-mega-col">
+                                        <h4>Exterior Signs</h4>
+                                        <ul>
+                                            <li><a href="/services/channel-letters.html">Channel Letters</a></li>
+                                            <li><a href="/services/monument-signs.html">Monument Signs</a></li>
+                                            <li><a href="/services/pylon-signs.html">Pylon Signs</a></li>
+                                            <li><a href="/services/awnings-canopies.html">Awnings & Canopies</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-mega-col">
+                                        <h4>Illuminated</h4>
+                                        <ul>
+                                            <li><a href="/services/led-signs.html">LED Signs</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-mega-col">
+                                        <h4>Specialty</h4>
+                                        <ul>
+                                            <li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li><a href="/portfolio/">Portfolio</a></li>
+                        <li>
+                            <a href="/industries/">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <a href="/industries/retail-signs/">Retail & Storefronts</a>
+                                <a href="/industries/restaurant-signs/">Restaurants</a>
+                                <a href="/industries/healthcare-signs/">Healthcare</a>
+                                <a href="/industries/corporate-signs/">Corporate</a>
+                                <a href="/industries/real-estate-signs/">Real Estate</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/locations/">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-label">Pennsylvania</div>
+                                <a href="/locations/philadelphia-signs/">Philadelphia</a>
+                                <a href="/locations/bucks-county-signs/">Bucks County</a>
+                                <a href="/locations/langhorne-signs/">Langhorne</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <a href="/locations/nationwide-sign-installation/">Nationwide</a>
+                            </div>
+                        </li>
+                        <li><a href="/portfolio.html">Portfolio</a></li>
                         <li><a href="/about/">About</a></li>
                         <li><a href="/contact/">Contact</a></li>
                     </ul>
-                    <a href="tel:866-358-9892" class="nav-phone">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-                        866-358-9892
-                    </a>
+                    <a href="tel:866-358-9892" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a>
+                    <a href="/contact/" class="btn btn-primary">Get Quote</a>
                 </nav>
                 <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
             </div>
