@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Portfolio | Kindle Sign Company | Langhorne PA</title>
+    <meta name="description" content="Browse our portfolio of custom signs including channel letters, monument signs, pylon signs, LED displays, and vehicle wraps. See our work across Bucks County, Philadelphia, and the Delaware Valley.">
+    <link rel="canonical" href="https://www.kindlesign.com/portfolio.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E85D04;
+            --primary-dark: #c94f00;
+            --black: #0a0a0a;
+            --dark: #141414;
+            --dark-2: #1a1a1a;
+            --dark-3: #222222;
+            --gray: #666666;
+            --gray-light: #999999;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --font-heading: 'Syne', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--white); color: var(--dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo img { height: 36px; width: auto; }
+        .nav { display: flex; align-items: center; gap: 1.5rem; }
+        .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+        .nav-links > li { position: relative; }
+        .nav-links > li > a { display: flex; align-items: center; gap: 0.25rem; padding: 0.5rem 0.75rem; font-size: 0.9375rem; font-weight: 500; color: var(--dark); border-radius: 8px; transition: all 0.2s; }
+        .nav-links > li > a:hover { background: var(--light); color: var(--primary); }
+        .nav-links > li > a svg { width: 14px; height: 14px; transition: transform 0.2s; }
+        .nav-links > li:hover > a svg { transform: rotate(180deg); }
+
+        /* Dropdowns */
+        .nav-dropdown { position: absolute; top: 100%; left: 0; min-width: 200px; background: var(--white); border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); padding: 0.5rem; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s; }
+        .nav-links > li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown a { display: block; padding: 0.5rem 0.875rem; font-size: 0.875rem; border-radius: 8px; transition: all 0.2s; }
+        .nav-dropdown a:hover { background: var(--light); color: var(--primary); }
+        .nav-dropdown-label { padding: 0.5rem 0.875rem 0.25rem; font-size: 0.6875rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.1em; }
+        .nav-dropdown-divider { height: 1px; background: var(--light); margin: 0.5rem; }
+
+        /* Mega Menu */
+        .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); width: 650px; background: var(--white); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); padding: 1.5rem; opacity: 0; visibility: hidden; transition: all 0.2s; }
+        .nav-links > li:hover .nav-mega { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .nav-mega-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .nav-mega-col h4 { font-size: 0.6875rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--light); }
+        .nav-mega-col ul { list-style: none; }
+        .nav-mega-col a { display: block; padding: 0.375rem 0; font-size: 0.875rem; transition: all 0.2s; }
+        .nav-mega-col a:hover { color: var(--primary); padding-left: 0.5rem; }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; transition: all 0.3s; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,93,4,0.3); }
+        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--dark); }
+        .nav-phone svg { width: 18px; height: 18px; color: var(--primary); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-toggle span { width: 24px; height: 2px; background: var(--dark); }
+
+        /* Page Hero */
+        .page-hero { padding: 10rem 0 5rem; background: var(--dark); position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: linear-gradient(135deg, transparent 0%, rgba(232,93,4,0.1) 100%); }
+        .page-hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .page-hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .page-hero-tag-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; }
+        .page-hero-tag-text { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; }
+        .page-hero h1 { font-family: var(--font-heading); font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+        .page-hero h1 .highlight { color: var(--primary); }
+        .page-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; }
+
+        /* Portfolio Section */
+        .portfolio { padding: 5rem 0; }
+
+        /* Filter Buttons */
+        .portfolio-filters { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 3rem; }
+        .filter-btn { padding: 0.625rem 1.25rem; font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; background: var(--light); color: var(--dark); border: none; border-radius: 100px; cursor: pointer; transition: all 0.3s; }
+        .filter-btn:hover { background: var(--dark); color: var(--white); }
+        .filter-btn.active { background: var(--primary); color: var(--white); }
+
+        /* Portfolio Grid */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+        /* Project Card */
+        .project-card { position: relative; border-radius: 16px; overflow: hidden; background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.4s ease; cursor: pointer; }
+        .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .project-card.hidden { display: none; }
+        .project-image { position: relative; aspect-ratio: 4/3; overflow: hidden; background: var(--light); }
+        .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .project-card:hover .project-image img { transform: scale(1.08); }
+        .project-image-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--light) 0%, #e0e0e0 100%); color: var(--gray); flex-direction: column; gap: 0.5rem; }
+        .project-image-placeholder svg { width: 48px; height: 48px; opacity: 0.5; }
+        .project-image-placeholder span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        .project-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; }
+        .project-card:hover .project-overlay { opacity: 1; }
+        .project-zoom { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.8); width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s; }
+        .project-card:hover .project-zoom { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        .project-zoom svg { width: 24px; height: 24px; color: var(--white); }
+        .project-info { padding: 1.5rem; }
+        .project-type { display: inline-block; padding: 0.25rem 0.75rem; background: rgba(232,93,4,0.1); color: var(--primary); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 100px; margin-bottom: 0.75rem; }
+        .project-title { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
+        .project-meta { display: flex; align-items: center; gap: 0.5rem; color: var(--gray); font-size: 0.875rem; }
+        .project-meta svg { width: 14px; height: 14px; color: var(--primary); }
+
+        /* Lightbox */
+        .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .lightbox.active { opacity: 1; visibility: visible; }
+        .lightbox-content { max-width: 90vw; max-height: 90vh; position: relative; }
+        .lightbox-image { max-width: 100%; max-height: 80vh; border-radius: 8px; opacity: 0; transform: scale(0.95); transition: all 0.3s ease 0.1s; }
+        .lightbox.active .lightbox-image { opacity: 1; transform: scale(1); }
+        .lightbox-info { text-align: center; margin-top: 1.5rem; }
+        .lightbox-title { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+        .lightbox-meta { color: rgba(255,255,255,0.7); font-size: 0.9375rem; }
+        .lightbox-meta span { margin: 0 0.5rem; }
+        .lightbox-close { position: absolute; top: -50px; right: 0; width: 40px; height: 40px; background: transparent; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; }
+        .lightbox-close:hover { background: var(--primary); border-color: var(--primary); }
+        .lightbox-close svg { width: 20px; height: 20px; color: var(--white); }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; background: rgba(255,255,255,0.1); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; }
+        .lightbox-nav:hover { background: var(--primary); }
+        .lightbox-nav svg { width: 24px; height: 24px; color: var(--white); }
+        .lightbox-prev { left: -80px; }
+        .lightbox-next { right: -80px; }
+
+        /* CTA Section */
+        .cta-banner { padding: 5rem 0; background: var(--primary); }
+        .cta-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+        .cta-banner-content h2 { font-family: var(--font-heading); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; color: var(--white); margin-bottom: 0.5rem; }
+        .cta-banner-content p { color: rgba(255,255,255,0.85); font-size: 1.125rem; }
+        .btn-white { background: var(--white); color: var(--dark); }
+        .btn-white:hover { background: var(--light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+        /* Footer */
+        .footer { background: var(--dark); }
+        .footer-areas { padding: 2rem 0; border-bottom: 1px solid var(--dark-3); }
+        .footer-areas-inner { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-areas-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 600; color: var(--gray-light); }
+        .footer-areas-label svg { width: 18px; height: 18px; color: var(--primary); }
+        .footer-areas-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .area-tag { display: inline-block; padding: 0.375rem 0.875rem; background: var(--dark-3); border-radius: 100px; font-size: 0.8125rem; color: var(--gray-light); transition: all 0.2s; }
+        .area-tag:hover { background: var(--primary); color: var(--white); }
+        .footer-main { padding: 4rem 0; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; }
+        .footer-brand p { color: var(--gray); margin: 1rem 0; font-size: 0.9375rem; }
+        .footer-brand .logo img { filter: brightness(0) invert(1); }
+        .footer-contact a { display: flex; align-items: center; gap: 0.5rem; color: var(--gray-light); font-size: 0.9375rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+        .footer-contact a:hover { color: var(--primary); }
+        .footer-contact svg { width: 18px; height: 18px; color: var(--primary); }
+        .footer-col h4 { font-size: 0.8125rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a { font-size: 0.875rem; color: var(--gray); transition: color 0.2s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--dark-3); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-copyright { font-size: 0.875rem; color: var(--gray); }
+        .footer-copyright a { color: var(--gray); }
+        .footer-copyright a:hover { color: var(--primary); }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a { width: 40px; height: 40px; background: var(--dark-2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gray-light); transition: all 0.2s; }
+        .footer-social a:hover { background: var(--primary); color: var(--white); }
+        .footer-social svg { width: 18px; height: 18px; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-mega { width: 90vw; left: 0; transform: translateY(10px); }
+            .nav-links > li:hover .nav-mega { transform: translateY(0); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .lightbox-prev { left: 20px; }
+            .lightbox-next { right: 20px; }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-phone { display: none; }
+            .mobile-toggle { display: flex; }
+            .page-hero { padding: 8rem 0 3rem; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .portfolio-filters { gap: 0.5rem; }
+            .filter-btn { padding: 0.5rem 1rem; font-size: 0.8125rem; }
+            .cta-banner-inner { flex-direction: column; text-align: center; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .footer-areas-inner { justify-content: center; }
+            .footer-areas-list { justify-content: center; }
+            .lightbox-close { top: 20px; right: 20px; }
+            .lightbox-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo"><img src="l__3_.jpg" alt="Kindle Sign Company"></a>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="/services/">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-mega">
+                                <div class="nav-mega-grid">
+                                    <div class="nav-mega-col">
+                                        <h4>Exterior Signs</h4>
+                                        <ul>
+                                            <li><a href="/services/channel-letters.html">Channel Letters</a></li>
+                                            <li><a href="/services/monument-signs.html">Monument Signs</a></li>
+                                            <li><a href="/services/pylon-signs.html">Pylon Signs</a></li>
+                                            <li><a href="/services/awnings-canopies.html">Awnings & Canopies</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-mega-col">
+                                        <h4>Illuminated</h4>
+                                        <ul>
+                                            <li><a href="/services/led-signs.html">LED Signs</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-mega-col">
+                                        <h4>Specialty</h4>
+                                        <ul>
+                                            <li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/industries/">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <a href="/industries/retail-signs/">Retail & Storefronts</a>
+                                <a href="/industries/restaurant-signs/">Restaurants</a>
+                                <a href="/industries/healthcare-signs/">Healthcare</a>
+                                <a href="/industries/corporate-signs/">Corporate</a>
+                                <a href="/industries/real-estate-signs/">Real Estate</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/locations/">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-label">Pennsylvania</div>
+                                <a href="/locations/philadelphia-signs/">Philadelphia</a>
+                                <a href="/locations/bucks-county-signs/">Bucks County</a>
+                                <a href="/locations/langhorne-signs/">Langhorne</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <a href="/locations/nationwide-sign-installation/">Nationwide</a>
+                            </div>
+                        </li>
+                        <li><a href="/portfolio.html" style="color: var(--primary);">Portfolio</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                    <a href="tel:866-358-9892" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a>
+                    <a href="/contact/" class="btn btn-primary">Get Quote</a>
+                </nav>
+                <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="page-hero-tag">
+                        <span class="page-hero-tag-dot"></span>
+                        <span class="page-hero-tag-text">Featured Projects</span>
+                    </div>
+                    <h1>Our <span class="highlight">Work.</span></h1>
+                    <p>From local storefronts to national brands, explore the custom signage solutions we've created for businesses across the Delaware Valley and beyond.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio">
+            <div class="container">
+                <!-- Filter Buttons -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="channel-letters">Channel Letters</button>
+                    <button class="filter-btn" data-filter="monument">Monument Signs</button>
+                    <button class="filter-btn" data-filter="pylon">Pylon Signs</button>
+                    <button class="filter-btn" data-filter="led">LED Signs</button>
+                    <button class="filter-btn" data-filter="vehicle-wrap">Vehicle Wraps</button>
+                    <button class="filter-btn" data-filter="awning">Awnings</button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-category="channel-letters" data-title="Premier Auto Group" data-location="Bucks County, PA" data-type="Channel Letters">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">Channel Letters</span>
+                            <h3 class="project-title">Premier Auto Group</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Bucks County, PA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-category="monument" data-title="Sunrise Medical Center" data-location="Philadelphia, PA" data-type="Monument Sign">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">Monument Sign</span>
+                            <h3 class="project-title">Sunrise Medical Center</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Philadelphia, PA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-category="pylon" data-title="Valley Shopping Plaza" data-location="Langhorne, PA" data-type="Pylon Sign">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">Pylon Sign</span>
+                            <h3 class="project-title">Valley Shopping Plaza</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Langhorne, PA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-category="led" data-title="Downtown Diner" data-location="Newtown, PA" data-type="LED Sign">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">LED Sign</span>
+                            <h3 class="project-title">Downtown Diner</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Newtown, PA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-category="vehicle-wrap" data-title="Swift Delivery Services" data-location="Montgomery County, PA" data-type="Vehicle Wrap">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">Vehicle Wrap</span>
+                            <h3 class="project-title">Swift Delivery Services</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Montgomery County, PA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-category="awning" data-title="Cafe Bella" data-location="Doylestown, PA" data-type="Awning">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">Awning</span>
+                            <h3 class="project-title">Cafe Bella</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Doylestown, PA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="project-card" data-category="channel-letters" data-title="Fitness First Gym" data-location="Philadelphia, PA" data-type="Channel Letters">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">Channel Letters</span>
+                            <h3 class="project-title">Fitness First Gym</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Philadelphia, PA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="project-card" data-category="monument" data-title="Heritage Bank" data-location="Bucks County, PA" data-type="Monument Sign">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">Monument Sign</span>
+                            <h3 class="project-title">Heritage Bank</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Bucks County, PA
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="project-card" data-category="pylon" data-title="Riverside Office Park" data-location="Delaware County, PA" data-type="Pylon Sign">
+                        <div class="project-image">
+                            <div class="project-image-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                                <span>Project Image</span>
+                            </div>
+                            <div class="project-overlay"></div>
+                            <div class="project-zoom">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-type">Pylon Sign</span>
+                            <h3 class="project-title">Riverside Office Park</h3>
+                            <div class="project-meta">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Delaware County, PA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-banner-inner">
+                    <div class="cta-banner-content">
+                        <h2>Ready to Start Your Project?</h2>
+                        <p>Let's create signage that makes your business stand out.</p>
+                    </div>
+                    <a href="/contact/" class="btn btn-white">Get a Free Quote</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-meta"><span id="lightboxType"></span> &bull; <span id="lightboxLocation"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-areas"><div class="container"><div class="footer-areas-inner"><div class="footer-areas-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving</div><div class="footer-areas-list"><a href="/locations/langhorne-signs/" class="area-tag">Langhorne</a><a href="/locations/bucks-county-signs/" class="area-tag">Bucks County</a><a href="/locations/philadelphia-signs/" class="area-tag">Philadelphia</a><a href="/locations/montgomery-county-signs/" class="area-tag">Montgomery County</a><a href="/locations/delaware-county-signs/" class="area-tag">Delaware County</a><a href="/locations/newtown-signs/" class="area-tag">Newtown</a><a href="/locations/doylestown-signs/" class="area-tag">Doylestown</a></div></div></div></div>
+        <div class="footer-main"><div class="container"><div class="footer-grid">
+            <div class="footer-brand"><a href="/" class="logo"><img src="l__3_.jpg" alt="Kindle Sign Company - Langhorne PA Sign Shop"></a><p>Family-owned sign company in Langhorne PA since 2005. We focus on customer experience and timely communication, delivering signage from concept to install.</p><div class="footer-contact"><a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a><a href="mailto:Sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Sales@kindlesign.com</a></div></div>
+            <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/channel-letters.html">Channel Letters</a></li><li><a href="/services/monument-signs.html">Monument Signs</a></li><li><a href="/services/pylon-signs.html">Pylon Signs</a></li><li><a href="/services/led-signs.html">LED Signs</a></li><li><a href="/services/awnings-canopies.html">Awnings</a></li><li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li></ul></div>
+            <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/locations/langhorne-signs/">Langhorne PA</a></li><li><a href="/locations/bucks-county-signs/">Bucks County</a></li><li><a href="/locations/philadelphia-signs/">Philadelphia</a></li><li><a href="/locations/montgomery-county-signs/">Montgomery County</a></li><li><a href="/locations/delaware-county-signs/">Delaware County</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/about/testimonials/">Reviews</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+        </div></div></div>
+        <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 Kindle Sign Company | 116 N Bellevue Ave Suite 306, Langhorne PA 19047 | <a href="/privacy/">Privacy</a> &middot; <a href="/sitemap/">Sitemap</a></p><div class="footer-social"><a href="https://www.facebook.com/kindlesigncompany" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/kindlesigncompany" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a><a href="https://www.linkedin.com/company/kindle-sign-company" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/></svg></a></div></div></div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxType = document.getElementById('lightboxType');
+        const lightboxLocation = document.getElementById('lightboxLocation');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        let currentIndex = 0;
+        let visibleCards = [];
+
+        function updateVisibleCards() {
+            visibleCards = Array.from(projectCards).filter(card => !card.classList.contains('hidden'));
+        }
+
+        function openLightbox(index) {
+            updateVisibleCards();
+            currentIndex = index;
+            const card = visibleCards[currentIndex];
+
+            // For now, use a placeholder since we don't have real images
+            lightboxImage.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect fill="#f5f5f5" width="800" height="600"/><text x="400" y="300" text-anchor="middle" fill="#999" font-family="sans-serif" font-size="24">Project Image</text></svg>');
+            lightboxTitle.textContent = card.dataset.title;
+            lightboxType.textContent = card.dataset.type;
+            lightboxLocation.textContent = card.dataset.location;
+
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(direction) {
+            updateVisibleCards();
+            currentIndex = (currentIndex + direction + visibleCards.length) % visibleCards.length;
+            const card = visibleCards[currentIndex];
+
+            lightboxTitle.textContent = card.dataset.title;
+            lightboxType.textContent = card.dataset.type;
+            lightboxLocation.textContent = card.dataset.location;
+        }
+
+        // Event listeners
+        projectCards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                updateVisibleCards();
+                const visibleIndex = visibleCards.indexOf(card);
+                openLightbox(visibleIndex);
+            });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+        lightboxNext.addEventListener('click', () => navigateLightbox(1));
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+    </script>
+</body>
+</html>
