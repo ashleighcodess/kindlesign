@@ -19,6 +19,14 @@
 # Industry pages
 /industries/retail-signs       /industries/retail-signs.html      200
 /industries/retail-signs/      /industries/retail-signs.html      200
+/industries/restaurant-signs   /industries/restaurant-signs.html  200
+/industries/restaurant-signs/  /industries/restaurant-signs.html  200
+/industries/healthcare-signs   /industries/healthcare-signs.html  200
+/industries/healthcare-signs/  /industries/healthcare-signs.html  200
+/industries/corporate-signs    /industries/corporate-signs.html   200
+/industries/corporate-signs/   /industries/corporate-signs.html   200
+/industries/real-estate-signs  /industries/real-estate-signs.html 200
+/industries/real-estate-signs/ /industries/real-estate-signs.html 200
 
 # Future pages
 /services                      /index.html                        200
