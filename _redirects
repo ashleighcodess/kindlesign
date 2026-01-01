@@ -28,8 +28,19 @@
 /industries/real-estate-signs  /industries/real-estate-signs.html 200
 /industries/real-estate-signs/ /industries/real-estate-signs.html 200
 
+# Location pages
+/locations/pennsylvania-signs   /locations/pennsylvania-signs.html   200
+/locations/pennsylvania-signs/  /locations/pennsylvania-signs.html   200
+/locations/new-jersey-signs     /locations/new-jersey-signs.html     200
+/locations/new-jersey-signs/    /locations/new-jersey-signs.html     200
+/locations/delaware-signs       /locations/delaware-signs.html       200
+/locations/delaware-signs/      /locations/delaware-signs.html       200
+/locations/florida-signs        /locations/florida-signs.html        200
+/locations/florida-signs/       /locations/florida-signs.html        200
+
 # Future pages
 /services                      /index.html                        200
 /portfolio                     /portfolio.html                    200
 /about                         /index.html                        200
 /contact                       /contact.html                      200
+/locations                     /index.html                        200
