@@ -556,22 +556,25 @@
                         <a href="tel:866-358-9892" class="btn btn-primary">Call 866-358-9892</a>
                     </div>
                     <div class="cta-form">
-                        <form>
+                        <form action="https://formsubmit.co/Sales@kindlesign.com" method="POST">
+                            <input type="hidden" name="_subject" value="LED Signs Quote Request">
+                            <input type="hidden" name="_next" value="https://www.kindlesign.com/services/led-signs.html?submitted=true">
+                            <input type="hidden" name="_captcha" value="true">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" placeholder="Your name" required>
+                                <input type="text" name="name" placeholder="Your name" required>
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="email" placeholder="your@email.com" required>
+                                <input type="email" name="email" placeholder="your@email.com" required>
                             </div>
                             <div class="form-group">
                                 <label>Phone</label>
-                                <input type="tel" placeholder="(555) 123-4567">
+                                <input type="tel" name="phone" placeholder="(555) 123-4567">
                             </div>
                             <div class="form-group">
                                 <label>Project Details</label>
-                                <textarea placeholder="Tell us about your LED sign needs..."></textarea>
+                                <textarea name="message" placeholder="Tell us about your LED sign needs..."></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary" style="width:100%">Get Free Quote</button>
                         </form>
