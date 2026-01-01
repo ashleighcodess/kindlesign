@@ -200,8 +200,11 @@
         .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: transparent; transition: all 0.3s; }
         .header.scrolled { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
         .header-inner { display: flex; align-items: center; justify-content: space-between; }
-        .logo img { height: 36px; width: auto; filter: brightness(0) invert(1); transition: filter 0.3s; }
-        .header.scrolled .logo img { filter: none; }
+        .logo img { height: 36px; width: auto; }
+        .logo .logo-dark { display: none; }
+        .logo .logo-light { display: block; }
+        .header.scrolled .logo .logo-dark { display: block; }
+        .header.scrolled .logo .logo-light { display: none; }
         .nav { display: flex; align-items: center; gap: 1.5rem; }
         .nav-links { display: flex; gap: 0.25rem; list-style: none; }
         .nav-links > li { position: relative; }
@@ -552,7 +555,7 @@
         .footer-main { padding: 4rem 0; }
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; }
         .footer-brand p { color: var(--gray); margin: 1rem 0; font-size: 0.9375rem; }
-        .footer-brand .logo img { filter: brightness(0) invert(1); }
+        .footer-brand .logo img { height: 36px; width: auto; }
         .footer-contact a { display: flex; align-items: center; gap: 0.5rem; color: var(--gray-light); font-size: 0.9375rem; margin-bottom: 0.5rem; transition: color 0.2s; }
         .footer-contact a:hover { color: var(--primary); }
         .footer-contact svg { width: 18px; height: 18px; color: var(--primary); }
@@ -613,7 +616,7 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-inner">
-                <a href="/" class="logo"><img src="l__3_.jpg" alt="Kindle Sign Company"></a>
+                <a href="/" class="logo"><img src="kindle-logo-9.png" alt="Kindle Sign Company" class="logo-light"><img src="kindle-logo-1.png" alt="Kindle Sign Company" class="logo-dark"></a>
                 <nav class="nav">
                     <ul class="nav-links">
                         <li>
@@ -887,7 +890,7 @@
     <footer class="footer">
         <div class="footer-areas"><div class="container"><div class="footer-areas-inner"><div class="footer-areas-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving</div><div class="footer-areas-list"><a href="/locations/langhorne-signs/" class="area-tag">Langhorne</a><a href="/locations/bucks-county-signs/" class="area-tag">Bucks County</a><a href="/locations/philadelphia-signs/" class="area-tag">Philadelphia</a><a href="/locations/montgomery-county-signs/" class="area-tag">Montgomery County</a><a href="/locations/delaware-county-signs/" class="area-tag">Delaware County</a><a href="/locations/newtown-signs/" class="area-tag">Newtown</a><a href="/locations/doylestown-signs/" class="area-tag">Doylestown</a></div></div></div></div>
         <div class="footer-main"><div class="container"><div class="footer-grid">
-            <div class="footer-brand"><a href="/" class="logo"><img src="l__3_.jpg" alt="Kindle Sign Company - Langhorne PA Sign Shop"></a><p>Family-owned sign company in Langhorne PA since 2005. We focus on customer experience and timely communication, delivering signage from concept to install.</p><div class="footer-contact"><a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a><a href="mailto:Sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Sales@kindlesign.com</a></div></div>
+            <div class="footer-brand"><a href="/" class="logo"><img src="kindle-logo-9.png" alt="Kindle Sign Company - Langhorne PA Sign Shop"></a><p>Family-owned sign company in Langhorne PA since 2005. We focus on customer experience and timely communication, delivering signage from concept to install.</p><div class="footer-contact"><a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a><a href="mailto:Sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Sales@kindlesign.com</a></div></div>
             <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/channel-letters.html">Channel Letters</a></li><li><a href="/services/monument-signs.html">Monument Signs</a></li><li><a href="/services/pylon-signs.html">Pylon Signs</a></li><li><a href="/services/led-signs.html">LED Signs</a></li><li><a href="/services/awnings-canopies.html">Awnings</a></li><li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li></ul></div>
             <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/locations/langhorne-signs/">Langhorne PA</a></li><li><a href="/locations/bucks-county-signs/">Bucks County</a></li><li><a href="/locations/philadelphia-signs/">Philadelphia</a></li><li><a href="/locations/montgomery-county-signs/">Montgomery County</a></li><li><a href="/locations/delaware-county-signs/">Delaware County</a></li></ul></div>
             <div class="footer-col"><h4>Company</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/portfolio/">Portfolio</a></li><li><a href="/about/testimonials/">Reviews</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
