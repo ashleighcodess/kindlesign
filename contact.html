@@ -7,6 +7,105 @@
     <meta name="description" content="Contact Kindle Sign Company for custom signs, channel letters, and vehicle wraps. Offices in Langhorne PA and Stuart FL. Serving NJ, PA, DE, and FL. Call 866-358-9892.">
     <link rel="canonical" href="https://www.kindlesign.com/contact.html">
 
+    <!-- LocalBusiness Schema with Multiple Locations -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SignShop",
+        "name": "Kindle Sign Company",
+        "image": "https://www.kindlesign.com/logo.jpg",
+        "url": "https://www.kindlesign.com",
+        "telephone": "+1-866-358-9892",
+        "email": "sales@kindlesign.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "116 N Bellevue Ave Suite 306",
+            "addressLocality": "Langhorne",
+            "addressRegion": "PA",
+            "postalCode": "19047",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.1745,
+            "longitude": -74.9228
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+        },
+        "areaServed": [
+            {"@type": "State", "name": "Pennsylvania"},
+            {"@type": "State", "name": "New Jersey"},
+            {"@type": "State", "name": "Delaware"},
+            {"@type": "State", "name": "Florida"}
+        ],
+        "priceRange": "$$",
+        "description": "Family-owned sign company with offices in Langhorne PA and Stuart FL. Custom signage including channel letters, monument signs, pylon signs, LED displays, awnings, and vehicle wraps."
+    }
+    </script>
+
+    <!-- Secondary Location Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Kindle Sign Company - Southern Office",
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "Kindle Sign Company"
+        },
+        "telephone": "+1-772-777-9376",
+        "email": "andrew@kindlesign.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "801 SE Johnson Ave Suite 206",
+            "addressLocality": "Stuart",
+            "addressRegion": "FL",
+            "postalCode": "34994",
+            "addressCountry": "US"
+        },
+        "areaServed": [
+            {"@type": "AdministrativeArea", "name": "Martin County"},
+            {"@type": "AdministrativeArea", "name": "Palm Beach County"},
+            {"@type": "AdministrativeArea", "name": "Broward County"},
+            {"@type": "AdministrativeArea", "name": "Miami-Dade County"}
+        ]
+    }
+    </script>
+
+    <!-- ContactPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Kindle Sign Company",
+        "description": "Contact Kindle Sign Company for custom signs and vehicle wraps in PA, NJ, DE, and FL.",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Kindle Sign Company",
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-866-358-9892",
+                    "contactType": "sales",
+                    "areaServed": ["PA", "NJ", "DE"],
+                    "availableLanguage": "English"
+                },
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-772-777-9376",
+                    "contactType": "sales",
+                    "areaServed": "FL",
+                    "availableLanguage": "English"
+                }
+            ]
+        }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">

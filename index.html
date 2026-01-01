@@ -64,7 +64,96 @@
         "description": "Family-owned sign company in Langhorne PA. We design, fabricate and install custom signage from concept to completion. Serving Bucks County, Philadelphia, and the greater Delaware Valley since 2005."
     }
     </script>
-    
+
+    <!-- FAQPage Schema for AEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What areas does Kindle Sign Company serve?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kindle Sign Company serves the East Coast with offices in Langhorne, PA and Stuart, FL. We provide sign services throughout Pennsylvania (Bucks, Montgomery, Chester, Delaware, Lehigh, Northampton, Berks counties), New Jersey (Burlington, Camden, Mercer, Monmouth, Ocean and more), Delaware (New Castle, Kent counties), and Florida (Martin, Palm Beach, Broward, Miami-Dade, Brevard counties)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of signs does Kindle Sign Company make?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We specialize in channel letters, monument signs, pylon signs, LED digital signs, awnings and canopies, vehicle wraps, dimensional letters, wayfinding signage, and complete branding packages. All signs are custom designed and fabricated in-house."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to get a custom sign made?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Project timelines vary by sign type. Simple signs take 2-3 weeks, channel letters take 4-6 weeks, and monument signs take 8-12 weeks including permitting. We provide detailed timelines during consultation and keep you informed throughout the process."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you handle sign permits in Pennsylvania and New Jersey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Kindle Sign Company handles all permitting as part of our turnkey service. We manage permits in Bucks County, Montgomery County, Philadelphia, and all municipalities we serve in PA, NJ, DE, and FL."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much do custom business signs cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sign costs depend on type, size, materials, and installation complexity. Channel letters typically range from $3,000-$15,000+, monument signs from $5,000-$25,000+, and pylon signs from $10,000-$50,000+. Contact us for a free quote tailored to your specific needs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Kindle Sign Company offer sign installation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we provide complete turnkey service from design through installation. Our licensed, insured installation crews handle all mounting, electrical connections, and final inspections. We serve customers from our Langhorne PA and Stuart FL offices."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Custom Sign Manufacturing and Installation",
+        "provider": {
+            "@type": "SignShop",
+            "name": "Kindle Sign Company"
+        },
+        "areaServed": [
+            {"@type": "State", "name": "Pennsylvania"},
+            {"@type": "State", "name": "New Jersey"},
+            {"@type": "State", "name": "Delaware"},
+            {"@type": "State", "name": "Florida"}
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Sign Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Channel Letters"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Monument Signs"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pylon Signs"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "LED Signs"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Awnings & Canopies"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vehicle Wraps"}}
+            ]
+        }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -756,12 +845,14 @@
         <section class="faq" id="faq">
             <div class="container">
                 <div class="faq-grid">
-                    <div class="faq-intro"><span class="section-tag">FAQ</span><h2>Questions About Signs in Bucks County?</h2><p>We're here to help local businesses.</p><a href="/contact/" class="btn btn-primary">Ask Us</a></div>
+                    <div class="faq-intro"><span class="section-tag">FAQ</span><h2>Questions About Custom Signs?</h2><p>Common questions from businesses in PA, NJ, DE & FL.</p><a href="/contact.html" class="btn btn-primary">Ask Us</a></div>
                     <div class="faq-list">
-                        <div class="faq-item active"><button class="faq-question">What areas do you serve from Langhorne?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">We're based in Langhorne PA and primarily serve Bucks County, Montgomery County, Philadelphia, Delaware County, and nearby New Jersey towns like Trenton and Princeton.</div></div></div>
-                        <div class="faq-item"><button class="faq-question">What types of signs do you make?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Channel letters, monument signs, pylon signs, LED displays, awnings, wayfinding, dimensional letters, vehicle wraps, and complete branding packages.</div></div></div>
-                        <div class="faq-item"><button class="faq-question">How long does a sign project take?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Simple signs: 2-3 weeks. Channel letters: 4-6 weeks. Monument signs: 8-12 weeks including permitting. We keep you informed at every step.</div></div></div>
-                        <div class="faq-item"><button class="faq-question">Do you handle Bucks County permits?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Yes! We handle all local permitting in Bucks County, Montgomery County, and Philadelphia. Full turnkey service from design to install.</div></div></div>
+                        <div class="faq-item active"><button class="faq-question">What areas does Kindle Sign Company serve?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Kindle Sign Company serves the East Coast with offices in Langhorne, PA and Stuart, FL. We provide sign services throughout Pennsylvania (Bucks, Montgomery, Chester, Delaware, Lehigh, Northampton, Berks counties), New Jersey (Burlington, Camden, Mercer, Monmouth, Ocean and more), Delaware (New Castle, Kent counties), and Florida (Martin, Palm Beach, Broward, Miami-Dade, Brevard counties).</div></div></div>
+                        <div class="faq-item"><button class="faq-question">What types of signs does Kindle Sign Company make?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">We specialize in channel letters, monument signs, pylon signs, LED digital signs, awnings and canopies, vehicle wraps, dimensional letters, wayfinding signage, and complete branding packages. All signs are custom designed and fabricated in-house.</div></div></div>
+                        <div class="faq-item"><button class="faq-question">How long does it take to get a custom sign made?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Project timelines vary by sign type. Simple signs take 2-3 weeks, channel letters take 4-6 weeks, and monument signs take 8-12 weeks including permitting. We provide detailed timelines during consultation and keep you informed throughout the process.</div></div></div>
+                        <div class="faq-item"><button class="faq-question">Do you handle sign permits in Pennsylvania and New Jersey?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Yes, Kindle Sign Company handles all permitting as part of our turnkey service. We manage permits in Bucks County, Montgomery County, Philadelphia, and all municipalities we serve in PA, NJ, DE, and FL.</div></div></div>
+                        <div class="faq-item"><button class="faq-question">How much do custom business signs cost?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Sign costs depend on type, size, materials, and installation complexity. Channel letters typically range from $3,000-$15,000+, monument signs from $5,000-$25,000+, and pylon signs from $10,000-$50,000+. Contact us for a free quote tailored to your specific needs.</div></div></div>
+                        <div class="faq-item"><button class="faq-question">Does Kindle Sign Company offer sign installation?<span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span></button><div class="faq-answer"><div class="faq-answer-inner">Yes, we provide complete turnkey service from design through installation. Our licensed, insured installation crews handle all mounting, electrical connections, and final inspections. We serve customers from our Langhorne PA and Stuart FL offices.</div></div></div>
                     </div>
                 </div>
             </div>
