@@ -731,19 +731,19 @@
                     </div>
                     <div class="benefits-visual">
                         <div class="benefits-stat">
-                            <div class="benefits-stat-number">76%</div>
+                            <div class="benefits-stat-number" data-count="76" data-suffix="%">0%</div>
                             <div class="benefits-stat-label">of customers enter stores based on signage</div>
                         </div>
                         <div class="benefits-stat">
-                            <div class="benefits-stat-number">50%</div>
+                            <div class="benefits-stat-number" data-count="50" data-suffix="%">0%</div>
                             <div class="benefits-stat-label">of first-time visitors are attracted by signs</div>
                         </div>
                         <div class="benefits-stat">
-                            <div class="benefits-stat-number">85%</div>
+                            <div class="benefits-stat-number" data-count="85" data-suffix="%">0%</div>
                             <div class="benefits-stat-label">of your customers live within 5 miles</div>
                         </div>
                         <div class="benefits-stat">
-                            <div class="benefits-stat-number">$0.04</div>
+                            <div class="benefits-stat-number" data-count="0.04" data-prefix="$" data-decimals="2">$0</div>
                             <div class="benefits-stat-label">cost per impression vs. $7+ for other ads</div>
                         </div>
                     </div>
@@ -771,11 +771,11 @@
                             <p>Complete storefront transformation including channel letters, window graphics, and blade sign for this Doylestown clothing boutique.</p>
                             <div class="case-study-results">
                                 <div class="case-study-result">
-                                    <div class="case-study-result-number">+45%</div>
+                                    <div class="case-study-result-number" data-count="45" data-prefix="+" data-suffix="%">0</div>
                                     <div class="case-study-result-label">Foot Traffic</div>
                                 </div>
                                 <div class="case-study-result">
-                                    <div class="case-study-result-number">+32%</div>
+                                    <div class="case-study-result-number" data-count="32" data-prefix="+" data-suffix="%">0</div>
                                     <div class="case-study-result-label">Sales</div>
                                 </div>
                             </div>
@@ -792,11 +792,11 @@
                             <p>Multi-tenant pylon sign, individual storefront signs for 12 retailers, and comprehensive wayfinding system throughout the shopping center.</p>
                             <div class="case-study-results">
                                 <div class="case-study-result">
-                                    <div class="case-study-result-number">12</div>
+                                    <div class="case-study-result-number" data-count="12">0</div>
                                     <div class="case-study-result-label">Storefronts</div>
                                 </div>
                                 <div class="case-study-result">
-                                    <div class="case-study-result-number">100%</div>
+                                    <div class="case-study-result-number" data-count="100" data-suffix="%">0</div>
                                     <div class="case-study-result-label">Tenant Satisfaction</div>
                                 </div>
                             </div>
@@ -1179,6 +1179,57 @@
                     item.classList.add('active');
                 }
             });
+        });
+    </script>
+
+    <!-- Number Counter Animation -->
+    <script>
+        function animateCounter(element) {
+            const target = parseFloat(element.dataset.count);
+            const prefix = element.dataset.prefix || '';
+            const suffix = element.dataset.suffix || '';
+            const decimals = parseInt(element.dataset.decimals) || 0;
+            const duration = 2000;
+            const start = 0;
+            const startTime = performance.now();
+
+            function easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = easeOutQuart(progress);
+                const current = start + (target - start) * easedProgress;
+
+                if (decimals > 0) {
+                    element.textContent = prefix + current.toFixed(decimals) + suffix;
+                } else {
+                    element.textContent = prefix + Math.round(current) + suffix;
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Intersection Observer to trigger animation when elements come into view
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    animateCounter(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe all counter elements
+        document.querySelectorAll('[data-count]').forEach(el => {
+            counterObserver.observe(el);
         });
     </script>
 </body>
