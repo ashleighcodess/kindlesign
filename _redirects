@@ -16,8 +16,12 @@
 /services/awnings-canopies/    /services/awnings-canopies.html   200
 /services/vehicle-wraps/       /services/vehicle-wraps.html      200
 
+# Industry pages
+/industries/retail-signs       /industries/retail-signs.html      200
+/industries/retail-signs/      /industries/retail-signs.html      200
+
 # Future pages
 /services                      /index.html                        200
-/portfolio                     /index.html                        200
+/portfolio                     /portfolio.html                    200
 /about                         /index.html                        200
-/contact                       /index.html                        200
+/contact                       /contact.html                      200
