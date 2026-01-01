@@ -90,14 +90,14 @@
         .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
 
         /* Header */
-        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: #000000; box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
         .header-inner { display: flex; align-items: center; justify-content: space-between; }
         .logo img { height: 36px; width: auto; display: block; }
         .nav { display: flex; align-items: center; gap: 1.5rem; }
         .nav-links { display: flex; gap: 0.25rem; list-style: none; }
         .nav-links > li { position: relative; }
-        .nav-links > li > a { display: flex; align-items: center; gap: 0.25rem; padding: 0.5rem 0.75rem; font-size: 0.9375rem; font-weight: 500; color: var(--white); border-radius: 8px; transition: all 0.2s; }
-        .nav-links > li > a:hover { background: rgba(255,255,255,0.1); color: var(--primary); }
+        .nav-links > li > a { display: flex; align-items: center; gap: 0.25rem; padding: 0.5rem 0.75rem; font-size: 0.9375rem; font-weight: 500; color: var(--dark); border-radius: 8px; transition: all 0.2s; }
+        .nav-links > li > a:hover { background: var(--light); color: var(--primary); }
         .nav-links > li > a svg { width: 14px; height: 14px; transition: transform 0.2s; }
         .nav-links > li:hover > a svg { transform: rotate(180deg); }
 
@@ -122,10 +122,10 @@
         .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; transition: all 0.3s; }
         .btn-primary { background: var(--primary); color: var(--white); }
         .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,93,4,0.3); }
-        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--white); }
+        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--dark); }
         .nav-phone svg { width: 18px; height: 18px; color: var(--primary); }
         .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
-        .mobile-toggle span { width: 24px; height: 2px; background: var(--white); }
+        .mobile-toggle span { width: 24px; height: 2px; background: var(--dark); }
 
         /* Page Hero */
         .page-hero { padding: 10rem 0 5rem; background: var(--dark); position: relative; overflow: hidden; }
@@ -258,7 +258,7 @@
     <header class="header">
         <div class="container">
             <div class="header-inner">
-                <a href="/" class="logo"><img src="kindle-logo-9.png" alt="Kindle Sign Company"></a>
+                <a href="/" class="logo"><img src="kindle-logo-1.png" alt="Kindle Sign Company"></a>
                 <nav class="nav">
                     <ul class="nav-links">
                         <li>
