@@ -38,10 +38,16 @@
 /locations/florida-signs        /locations/florida-signs.html        200
 /locations/florida-signs/       /locations/florida-signs.html        200
 
-# Future pages
-/services                      /index.html                        200
+# Landing page redirects
+/services                      /services/channel-letters.html     200
+/services/                     /services/channel-letters.html     200
 /portfolio                     /portfolio.html                    200
-/about                         /index.html                        200
+/portfolio/                    /portfolio.html                    200
+/about                         /contact.html                      200
+/about/                        /contact.html                      200
 /contact                       /contact.html                      200
+/contact/                      /contact.html                      200
 /locations                     /locations/pennsylvania-signs.html 200
 /locations/                    /locations/pennsylvania-signs.html 200
+/industries                    /industries/retail-signs.html      200
+/industries/                   /industries/retail-signs.html      200
