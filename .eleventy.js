@@ -9,6 +9,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.png");
   eleventyConfig.addPassthroughCopy("favicon-32.png");
   eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("kindle-logo-1.png");
+  eleventyConfig.addPassthroughCopy("kindle-logo-9.png");
   eleventyConfig.addPassthroughCopy("_redirects");
 
   // Date formatting filter
