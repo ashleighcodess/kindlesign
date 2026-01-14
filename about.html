@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Kindle Sign Company | Family-Owned Since 2005</title>
+    <meta name="description" content="Learn about Kindle Sign Company - a family-owned sign shop serving PA, NJ, DE & FL since 2005. We focus on customer experience and quality craftsmanship.">
+    <link rel="canonical" href="https://www.kindlesign.com/about.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E85D04;
+            --primary-dark: #c94f00;
+            --black: #0a0a0a;
+            --dark: #141414;
+            --dark-2: #1a1a1a;
+            --dark-3: #222222;
+            --gray: #666666;
+            --gray-light: #999999;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --font-heading: 'Syne', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--white); color: var(--dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo img { height: 36px; width: auto; }
+        .logo .logo-light { display: none; }
+        .logo .logo-dark { display: block; }
+        .nav { display: flex; align-items: center; gap: 1.5rem; }
+        .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+        .nav-links > li { position: relative; }
+        .nav-links > li > a { display: flex; align-items: center; gap: 0.25rem; padding: 0.5rem 0.75rem; font-size: 0.9375rem; font-weight: 500; color: var(--dark); border-radius: 8px; transition: all 0.2s; }
+        .nav-links > li > a:hover { background: var(--light); color: var(--primary); }
+        .nav-links > li > a svg { width: 14px; height: 14px; transition: transform 0.2s; }
+        .nav-links > li:hover > a svg { transform: rotate(180deg); }
+
+        /* Dropdowns */
+        .nav-dropdown { position: absolute; top: 100%; left: 0; min-width: 200px; background: var(--white); border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); padding: 0.5rem; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s; }
+        .nav-links > li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown a { display: block; padding: 0.5rem 0.875rem; font-size: 0.875rem; border-radius: 8px; transition: all 0.2s; }
+        .nav-dropdown a:hover { background: var(--light); color: var(--primary); }
+        .nav-dropdown-label { padding: 0.5rem 0.875rem 0.25rem; font-size: 0.6875rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.1em; }
+        .nav-dropdown-divider { height: 1px; background: var(--light); margin: 0.5rem; }
+
+        /* Mega Menu */
+        .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); width: 650px; background: var(--white); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); padding: 1.5rem; opacity: 0; visibility: hidden; transition: all 0.2s; }
+        .nav-links > li:hover .nav-mega { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .nav-mega-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .nav-mega-col h4 { font-size: 0.6875rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--light); }
+        .nav-mega-col ul { list-style: none; }
+        .nav-mega-col a { display: block; padding: 0.375rem 0; font-size: 0.875rem; transition: all 0.2s; }
+        .nav-mega-col a:hover { color: var(--primary); padding-left: 0.5rem; }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; transition: all 0.3s; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,93,4,0.3); }
+        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--dark); }
+        .nav-phone svg { width: 18px; height: 18px; color: var(--primary); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-toggle span { width: 24px; height: 2px; background: var(--dark); }
+
+        /* Page Hero */
+        .page-hero { padding: 10rem 0 5rem; background: var(--dark); position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 100% at 100% 50%, rgba(232,93,4,0.15) 0%, rgba(232,93,4,0.05) 40%, transparent 70%); }
+        .page-hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .page-hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .page-hero-tag-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; }
+        .page-hero-tag-text { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; }
+        .page-hero h1 { font-family: var(--font-heading); font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+        .page-hero h1 .highlight { color: var(--primary); }
+        .page-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; }
+
+        /* About Content */
+        .about-section { padding: 5rem 0; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-content h2 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--dark); margin-bottom: 1.5rem; }
+        .about-content h2 span { color: var(--primary); }
+        .about-content p { color: var(--gray); margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.0625rem; }
+        .about-image { background: var(--light); border-radius: 20px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
+        .about-image svg { width: 80px; height: 80px; color: var(--primary); opacity: 0.3; }
+
+        /* Stats */
+        .stats-section { padding: 4rem 0; background: var(--light); }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+        .stat-item { text-align: center; }
+        .stat-number { font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .stat-label { font-size: 1rem; color: var(--gray); margin-top: 0.5rem; }
+
+        /* Values */
+        .values-section { padding: 5rem 0; }
+        .values-section h2 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--dark); text-align: center; margin-bottom: 3rem; }
+        .values-section h2 span { color: var(--primary); }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .value-card { padding: 2rem; background: var(--white); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; }
+        .value-icon { width: 60px; height: 60px; background: rgba(232,93,4,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
+        .value-icon svg { width: 28px; height: 28px; color: var(--primary); }
+        .value-card h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem; }
+        .value-card p { color: var(--gray); line-height: 1.7; }
+
+        /* CTA Section */
+        .cta-banner { padding: 5rem 0; background: var(--primary); }
+        .cta-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+        .cta-banner-content h2 { font-family: var(--font-heading); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; color: var(--white); margin-bottom: 0.5rem; }
+        .cta-banner-content p { color: rgba(255,255,255,0.85); font-size: 1.125rem; }
+        .btn-white { background: var(--white); color: var(--dark); }
+        .btn-white:hover { background: var(--light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+        /* Footer */
+        .footer { background: #000000; }
+        .footer-areas { padding: 2rem 0; border-bottom: 1px solid var(--dark-3); }
+        .footer-areas-inner { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-areas-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 600; color: var(--gray-light); }
+        .footer-areas-label svg { width: 18px; height: 18px; color: var(--primary); }
+        .footer-areas-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .area-tag { display: inline-block; padding: 0.375rem 0.875rem; background: var(--dark-3); border-radius: 100px; font-size: 0.8125rem; color: var(--gray-light); transition: all 0.2s; }
+        .area-tag:hover { background: var(--primary); color: var(--white); }
+        .footer-main { padding: 4rem 0; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; }
+        .footer-brand p { color: var(--gray); margin: 1rem 0; font-size: 0.9375rem; }
+        .footer-brand .logo img { height: 36px; width: auto; }
+        .footer-contact a { display: flex; align-items: center; gap: 0.5rem; color: var(--gray-light); font-size: 0.9375rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+        .footer-contact a:hover { color: var(--primary); }
+        .footer-contact svg { width: 18px; height: 18px; color: var(--primary); }
+        .footer-col h4 { font-size: 0.8125rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a { font-size: 0.875rem; color: var(--gray); transition: color 0.2s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--dark-3); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-copyright { font-size: 0.875rem; color: var(--gray); }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a { width: 40px; height: 40px; background: var(--dark-2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gray-light); transition: all 0.2s; }
+        .footer-social a:hover { background: var(--primary); color: var(--white); }
+        .footer-social svg { width: 18px; height: 18px; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-mega { width: 90vw; left: 0; transform: translateY(10px); }
+            .nav-links > li:hover .nav-mega { transform: translateY(0); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-phone { display: none; }
+            .mobile-toggle { display: flex; }
+            .page-hero { padding: 8rem 0 3rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .cta-banner-inner { flex-direction: column; text-align: center; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo"><img src="/images/kindle_print_edited.png" alt="Kindle Sign Company" class="logo-light"><img src="/kindle-logo-1.png" alt="Kindle Sign Company" class="logo-dark"></a>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="/services/">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-mega">
+                                <div class="nav-mega-grid">
+                                    <div class="nav-mega-col">
+                                        <h4>Exterior Signs</h4>
+                                        <ul>
+                                            <li><a href="/services/channel-letters.html">Channel Letters</a></li>
+                                            <li><a href="/services/monument-signs.html">Monument Signs</a></li>
+                                            <li><a href="/services/pylon-signs.html">Pylon Signs</a></li>
+                                            <li><a href="/services/awnings-canopies.html">Awnings & Canopies</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-mega-col">
+                                        <h4>Illuminated</h4>
+                                        <ul>
+                                            <li><a href="/services/led-signs.html">LED Signs</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-mega-col">
+                                        <h4>Specialty</h4>
+                                        <ul>
+                                            <li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/industries/">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <a href="/industries/retail-signs/">Retail & Storefronts</a>
+                                <a href="/industries/restaurant-signs/">Restaurants</a>
+                                <a href="/industries/healthcare-signs/">Healthcare</a>
+                                <a href="/industries/corporate-signs/">Corporate</a>
+                                <a href="/industries/real-estate-signs/">Real Estate</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/locations/">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-label">Northeast</div>
+                                <a href="/locations/pennsylvania-signs/">Pennsylvania</a>
+                                <a href="/locations/new-jersey-signs/">New Jersey</a>
+                                <a href="/locations/delaware-signs/">Delaware</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-label">Southeast</div>
+                                <a href="/locations/florida-signs/">Florida</a>
+                            </div>
+                        </li>
+                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="/about/" style="color: var(--primary);">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                    <a href="tel:866-358-9892" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a>
+                    <a href="/contact/" class="btn btn-primary">Get Quote</a>
+                </nav>
+                <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="page-hero-tag">
+                        <span class="page-hero-tag-dot"></span>
+                        <span class="page-hero-tag-text">Family-Owned Since 2005</span>
+                    </div>
+                    <h1>About <span class="highlight">Us.</span></h1>
+                    <p>We're a family-owned sign company dedicated to delivering exceptional signage with outstanding customer service.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h2>Your Partner in <span>Signage Solutions</span></h2>
+                        <p>Since 2005, Kindle Sign Company has been helping businesses across the East Coast make a lasting impression. What started as a small family operation has grown into a full-service sign shop serving Pennsylvania, New Jersey, Delaware, and Florida.</p>
+                        <p>We believe that great signage starts with great communication. That's why we focus on understanding your needs, keeping you informed throughout the process, and delivering results that exceed expectations.</p>
+                        <p>From the initial consultation to final installation, our team handles every aspect of your sign project with care and attention to detail. We're not just sign makers - we're your partners in building your brand's visibility.</p>
+                    </div>
+                    <div class="about-image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Years in Business</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Signs Installed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">States Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Google Rating</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="values-section">
+            <div class="container">
+                <h2>What Sets Us <span>Apart</span></h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.14.95.36 1.87.66 2.75a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.88.3 1.8.52 2.75.66A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <h3>Communication First</h3>
+                        <p>We keep you informed at every step. You'll always know the status of your project and what to expect next.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <h3>Quality Craftsmanship</h3>
+                        <p>We use premium materials and proven techniques to create signs that look great and last for years.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3>On-Time Delivery</h3>
+                        <p>We understand that timing matters. We work hard to meet your deadlines without compromising quality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-banner-inner">
+                    <div class="cta-banner-content">
+                        <h2>Ready to Work Together?</h2>
+                        <p>Let's discuss your signage needs and create something great.</p>
+                    </div>
+                    <a href="/contact/" class="btn btn-white">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-areas"><div class="container"><div class="footer-areas-inner"><div class="footer-areas-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving</div><div class="footer-areas-list"><a href="/locations/pennsylvania-signs/" class="area-tag">Pennsylvania</a><a href="/locations/new-jersey-signs/" class="area-tag">New Jersey</a><a href="/locations/delaware-signs/" class="area-tag">Delaware</a><a href="/locations/florida-signs/" class="area-tag">Florida</a></div></div></div></div>
+        <div class="footer-main"><div class="container"><div class="footer-grid">
+            <div class="footer-brand"><a href="/" class="logo"><img src="/images/kindle_print_edited.png" alt="Kindle Sign Company"></a><p>Family-owned sign company since 2005. We focus on customer experience and timely communication, delivering signage from concept to install.</p><div class="footer-contact"><a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a><a href="mailto:Sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Sales@kindlesign.com</a></div></div>
+            <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/channel-letters.html">Channel Letters</a></li><li><a href="/services/monument-signs.html">Monument Signs</a></li><li><a href="/services/pylon-signs.html">Pylon Signs</a></li><li><a href="/services/led-signs.html">LED Signs</a></li><li><a href="/services/awnings-canopies.html">Awnings</a></li><li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li></ul></div>
+            <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/locations/pennsylvania-signs/">Pennsylvania</a></li><li><a href="/locations/new-jersey-signs/">New Jersey</a></li><li><a href="/locations/delaware-signs/">Delaware</a></li><li><a href="/locations/florida-signs/">Florida</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+        </div></div></div>
+        <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 Kindle Sign Company</p><div class="footer-social"><a href="https://www.facebook.com/kindlesigncompany" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/kindlesigncompany" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a></div></div></div>
+    </footer>
+</body>
+</html>

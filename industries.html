@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries We Serve | Custom Signs by Industry | Kindle Sign Company</title>
+    <meta name="description" content="Kindle Sign Company creates custom signage for retail, restaurants, healthcare, corporate, and real estate. Specialized solutions for every industry.">
+    <link rel="canonical" href="https://www.kindlesign.com/industries.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E85D04;
+            --primary-dark: #c94f00;
+            --black: #0a0a0a;
+            --dark: #141414;
+            --dark-2: #1a1a1a;
+            --dark-3: #222222;
+            --gray: #666666;
+            --gray-light: #999999;
+            --light: #f5f5f5;
+            --white: #ffffff;
+            --font-heading: 'Syne', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--white); color: var(--dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Header */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo img { height: 36px; width: auto; }
+        .logo .logo-light { display: none; }
+        .logo .logo-dark { display: block; }
+        .nav { display: flex; align-items: center; gap: 1.5rem; }
+        .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+        .nav-links > li { position: relative; }
+        .nav-links > li > a { display: flex; align-items: center; gap: 0.25rem; padding: 0.5rem 0.75rem; font-size: 0.9375rem; font-weight: 500; color: var(--dark); border-radius: 8px; transition: all 0.2s; }
+        .nav-links > li > a:hover { background: var(--light); color: var(--primary); }
+        .nav-links > li > a svg { width: 14px; height: 14px; transition: transform 0.2s; }
+        .nav-links > li:hover > a svg { transform: rotate(180deg); }
+
+        /* Dropdowns */
+        .nav-dropdown { position: absolute; top: 100%; left: 0; min-width: 200px; background: var(--white); border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.15); padding: 0.5rem; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.2s; }
+        .nav-links > li:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown a { display: block; padding: 0.5rem 0.875rem; font-size: 0.875rem; border-radius: 8px; transition: all 0.2s; }
+        .nav-dropdown a:hover { background: var(--light); color: var(--primary); }
+        .nav-dropdown-label { padding: 0.5rem 0.875rem 0.25rem; font-size: 0.6875rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.1em; }
+        .nav-dropdown-divider { height: 1px; background: var(--light); margin: 0.5rem; }
+
+        /* Mega Menu */
+        .nav-mega { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); width: 650px; background: var(--white); border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); padding: 1.5rem; opacity: 0; visibility: hidden; transition: all 0.2s; }
+        .nav-links > li:hover .nav-mega { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .nav-mega-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .nav-mega-col h4 { font-size: 0.6875rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--light); }
+        .nav-mega-col ul { list-style: none; }
+        .nav-mega-col a { display: block; padding: 0.375rem 0; font-size: 0.875rem; transition: all 0.2s; }
+        .nav-mega-col a:hover { color: var(--primary); padding-left: 0.5rem; }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-family: var(--font-body); font-size: 0.9375rem; font-weight: 600; border-radius: 100px; border: none; cursor: pointer; transition: all 0.3s; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,93,4,0.3); }
+        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--dark); }
+        .nav-phone svg { width: 18px; height: 18px; color: var(--primary); }
+        .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-toggle span { width: 24px; height: 2px; background: var(--dark); }
+
+        /* Page Hero */
+        .page-hero { padding: 10rem 0 5rem; background: var(--dark); position: relative; overflow: hidden; }
+        .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 100% at 100% 50%, rgba(232,93,4,0.15) 0%, rgba(232,93,4,0.05) 40%, transparent 70%); }
+        .page-hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .page-hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .page-hero-tag-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; }
+        .page-hero-tag-text { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; }
+        .page-hero h1 { font-family: var(--font-heading); font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
+        .page-hero h1 .highlight { color: var(--primary); }
+        .page-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; }
+
+        /* Industries Grid */
+        .industries-section { padding: 5rem 0; }
+        .industries-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .industry-card { display: grid; grid-template-columns: 1fr 1.5fr; background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.4s ease; }
+        .industry-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .industry-card-image { background: var(--light); display: flex; align-items: center; justify-content: center; min-height: 200px; }
+        .industry-card-image svg { width: 64px; height: 64px; color: var(--primary); opacity: 0.5; }
+        .industry-card-content { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+        .industry-card-content h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem; }
+        .industry-card-content p { color: var(--gray); margin-bottom: 1.5rem; line-height: 1.7; }
+        .industry-card-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); font-weight: 600; transition: gap 0.3s; }
+        .industry-card-link:hover { gap: 0.75rem; }
+        .industry-card-link svg { width: 18px; height: 18px; }
+
+        /* CTA Section */
+        .cta-banner { padding: 5rem 0; background: var(--primary); }
+        .cta-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+        .cta-banner-content h2 { font-family: var(--font-heading); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; color: var(--white); margin-bottom: 0.5rem; }
+        .cta-banner-content p { color: rgba(255,255,255,0.85); font-size: 1.125rem; }
+        .btn-white { background: var(--white); color: var(--dark); }
+        .btn-white:hover { background: var(--light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+
+        /* Footer */
+        .footer { background: #000000; }
+        .footer-areas { padding: 2rem 0; border-bottom: 1px solid var(--dark-3); }
+        .footer-areas-inner { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .footer-areas-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 600; color: var(--gray-light); }
+        .footer-areas-label svg { width: 18px; height: 18px; color: var(--primary); }
+        .footer-areas-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .area-tag { display: inline-block; padding: 0.375rem 0.875rem; background: var(--dark-3); border-radius: 100px; font-size: 0.8125rem; color: var(--gray-light); transition: all 0.2s; }
+        .area-tag:hover { background: var(--primary); color: var(--white); }
+        .footer-main { padding: 4rem 0; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; }
+        .footer-brand p { color: var(--gray); margin: 1rem 0; font-size: 0.9375rem; }
+        .footer-brand .logo img { height: 36px; width: auto; }
+        .footer-contact a { display: flex; align-items: center; gap: 0.5rem; color: var(--gray-light); font-size: 0.9375rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+        .footer-contact a:hover { color: var(--primary); }
+        .footer-contact svg { width: 18px; height: 18px; color: var(--primary); }
+        .footer-col h4 { font-size: 0.8125rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.25rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a { font-size: 0.875rem; color: var(--gray); transition: color 0.2s; }
+        .footer-col a:hover { color: var(--primary); }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--dark-3); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-copyright { font-size: 0.875rem; color: var(--gray); }
+        .footer-social { display: flex; gap: 0.75rem; }
+        .footer-social a { width: 40px; height: 40px; background: var(--dark-2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gray-light); transition: all 0.2s; }
+        .footer-social a:hover { background: var(--primary); color: var(--white); }
+        .footer-social svg { width: 18px; height: 18px; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .industries-grid { grid-template-columns: 1fr; }
+            .nav-mega { width: 90vw; left: 0; transform: translateY(10px); }
+            .nav-links > li:hover .nav-mega { transform: translateY(0); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-phone { display: none; }
+            .mobile-toggle { display: flex; }
+            .page-hero { padding: 8rem 0 3rem; }
+            .industry-card { grid-template-columns: 1fr; }
+            .cta-banner-inner { flex-direction: column; text-align: center; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo"><img src="/images/kindle_print_edited.png" alt="Kindle Sign Company" class="logo-light"><img src="/kindle-logo-1.png" alt="Kindle Sign Company" class="logo-dark"></a>
+                <nav class="nav">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="/services/">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-mega">
+                                <div class="nav-mega-grid">
+                                    <div class="nav-mega-col">
+                                        <h4>Exterior Signs</h4>
+                                        <ul>
+                                            <li><a href="/services/channel-letters.html">Channel Letters</a></li>
+                                            <li><a href="/services/monument-signs.html">Monument Signs</a></li>
+                                            <li><a href="/services/pylon-signs.html">Pylon Signs</a></li>
+                                            <li><a href="/services/awnings-canopies.html">Awnings & Canopies</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-mega-col">
+                                        <h4>Illuminated</h4>
+                                        <ul>
+                                            <li><a href="/services/led-signs.html">LED Signs</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="nav-mega-col">
+                                        <h4>Specialty</h4>
+                                        <ul>
+                                            <li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/industries/" style="color: var(--primary);">Industries <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <a href="/industries/retail-signs/">Retail & Storefronts</a>
+                                <a href="/industries/restaurant-signs/">Restaurants</a>
+                                <a href="/industries/healthcare-signs/">Healthcare</a>
+                                <a href="/industries/corporate-signs/">Corporate</a>
+                                <a href="/industries/real-estate-signs/">Real Estate</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/locations/">Locations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></a>
+                            <div class="nav-dropdown">
+                                <div class="nav-dropdown-label">Northeast</div>
+                                <a href="/locations/pennsylvania-signs/">Pennsylvania</a>
+                                <a href="/locations/new-jersey-signs/">New Jersey</a>
+                                <a href="/locations/delaware-signs/">Delaware</a>
+                                <div class="nav-dropdown-divider"></div>
+                                <div class="nav-dropdown-label">Southeast</div>
+                                <a href="/locations/florida-signs/">Florida</a>
+                            </div>
+                        </li>
+                        <li><a href="/portfolio.html">Portfolio</a></li>
+                        <li><a href="/about/">About</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                    <a href="tel:866-358-9892" class="nav-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a>
+                    <a href="/contact/" class="btn btn-primary">Get Quote</a>
+                </nav>
+                <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="page-hero-tag">
+                        <span class="page-hero-tag-dot"></span>
+                        <span class="page-hero-tag-text">Specialized Signage</span>
+                    </div>
+                    <h1>Industries <span class="highlight">We Serve.</span></h1>
+                    <p>We create custom signage solutions tailored to the unique needs of businesses across multiple industries.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries Grid -->
+        <section class="industries-section">
+            <div class="container">
+                <div class="industries-grid">
+                    <div class="industry-card">
+                        <div class="industry-card-image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                        </div>
+                        <div class="industry-card-content">
+                            <h3>Retail & Storefronts</h3>
+                            <p>Stand out on busy streets with eye-catching channel letters, illuminated signs, and branded storefronts that attract customers and build recognition.</p>
+                            <a href="/industries/retail-signs/" class="industry-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-card-image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                        </div>
+                        <div class="industry-card-content">
+                            <h3>Restaurants & Food Service</h3>
+                            <p>Create an inviting atmosphere with menu boards, exterior signage, and branded elements that reflect your restaurant's unique personality.</p>
+                            <a href="/industries/restaurant-signs/" class="industry-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-card-image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="industry-card-content">
+                            <h3>Healthcare</h3>
+                            <p>Professional wayfinding, ADA-compliant signage, and exterior signs that help patients and visitors navigate your facility with confidence.</p>
+                            <a href="/industries/healthcare-signs/" class="industry-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-card-image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v3"/></svg>
+                        </div>
+                        <div class="industry-card-content">
+                            <h3>Corporate & Office</h3>
+                            <p>Make a professional impression with lobby signs, dimensional letters, directory boards, and exterior monument signs for your business.</p>
+                            <a href="/industries/corporate-signs/" class="industry-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-card-image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <div class="industry-card-content">
+                            <h3>Real Estate</h3>
+                            <p>Property signs, development signage, and community monuments that showcase properties and developments with lasting quality.</p>
+                            <a href="/industries/real-estate-signs/" class="industry-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-banner-inner">
+                    <div class="cta-banner-content">
+                        <h2>Don't See Your Industry?</h2>
+                        <p>We work with businesses of all types. Let's discuss your specific needs.</p>
+                    </div>
+                    <a href="/contact/" class="btn btn-white">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-areas"><div class="container"><div class="footer-areas-inner"><div class="footer-areas-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving</div><div class="footer-areas-list"><a href="/locations/pennsylvania-signs/" class="area-tag">Pennsylvania</a><a href="/locations/new-jersey-signs/" class="area-tag">New Jersey</a><a href="/locations/delaware-signs/" class="area-tag">Delaware</a><a href="/locations/florida-signs/" class="area-tag">Florida</a></div></div></div></div>
+        <div class="footer-main"><div class="container"><div class="footer-grid">
+            <div class="footer-brand"><a href="/" class="logo"><img src="/images/kindle_print_edited.png" alt="Kindle Sign Company"></a><p>Family-owned sign company since 2005. We focus on customer experience and timely communication, delivering signage from concept to install.</p><div class="footer-contact"><a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a><a href="mailto:Sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Sales@kindlesign.com</a></div></div>
+            <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/channel-letters.html">Channel Letters</a></li><li><a href="/services/monument-signs.html">Monument Signs</a></li><li><a href="/services/pylon-signs.html">Pylon Signs</a></li><li><a href="/services/led-signs.html">LED Signs</a></li><li><a href="/services/awnings-canopies.html">Awnings</a></li><li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li></ul></div>
+            <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/locations/pennsylvania-signs/">Pennsylvania</a></li><li><a href="/locations/new-jersey-signs/">New Jersey</a></li><li><a href="/locations/delaware-signs/">Delaware</a></li><li><a href="/locations/florida-signs/">Florida</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+        </div></div></div>
+        <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 Kindle Sign Company</p><div class="footer-social"><a href="https://www.facebook.com/kindlesigncompany" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/kindlesigncompany" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a></div></div></div>
+    </footer>
+</body>
+</html>
