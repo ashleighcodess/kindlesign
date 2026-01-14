@@ -270,11 +270,11 @@
         .footer-social svg { width: 18px; height: 18px; }
 
         /* Sidebar Quote Form */
-        .sidebar-quote { position: fixed; top: 50%; right: 0; transform: translateY(-50%); z-index: 998; }
-        .sidebar-quote-toggle { position: fixed; right: 0; top: 50%; transform: translateY(-50%); background: var(--primary); color: var(--white); padding: 0.875rem 0.5rem; border-radius: 8px 0 0 8px; cursor: pointer; writing-mode: vertical-rl; text-orientation: mixed; font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.05em; box-shadow: -3px 0 15px rgba(0,0,0,0.15); transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+        .sidebar-quote { position: fixed; top: 50%; left: 0; transform: translateY(-50%); z-index: 998; }
+        .sidebar-quote-toggle { position: fixed; left: 0; top: 50%; transform: translateY(-50%); background: var(--primary); color: var(--white); padding: 0.875rem 0.5rem; border-radius: 0 8px 8px 0; cursor: pointer; writing-mode: vertical-rl; text-orientation: mixed; font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.05em; box-shadow: 3px 0 15px rgba(0,0,0,0.15); transition: all 0.3s; display: flex; align-items: center; gap: 0.5rem; }
         .sidebar-quote-toggle:hover { background: var(--primary-dark); }
         .sidebar-quote-toggle svg { width: 18px; height: 18px; transform: rotate(90deg); }
-        .sidebar-quote-panel { position: fixed; right: 0; top: 50%; transform: translateY(-50%) translateX(100%); width: 300px; max-height: 80vh; background: var(--white); border-radius: 16px 0 0 16px; padding: 1.25rem; box-shadow: -10px 0 40px rgba(0,0,0,0.2); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); overflow-y: auto; }
+        .sidebar-quote-panel { position: fixed; left: 0; top: 50%; transform: translateY(-50%) translateX(-100%); width: 300px; max-height: 80vh; background: var(--white); border-radius: 0 16px 16px 0; padding: 1.25rem; box-shadow: 10px 0 40px rgba(0,0,0,0.2); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); overflow-y: auto; }
         .sidebar-quote.open .sidebar-quote-panel { transform: translateY(-50%) translateX(0); }
         .sidebar-quote.open .sidebar-quote-toggle { opacity: 0; pointer-events: none; }
         .sidebar-quote-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.875rem; }
