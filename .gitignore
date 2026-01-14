@@ -26,6 +26,7 @@ vendor/
 # Build output (if added later)
 dist/
 build/
+_site/
 .cache/
 
 # Environment files

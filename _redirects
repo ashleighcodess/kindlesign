@@ -52,9 +52,9 @@
 /industries                    /industries.html                   200
 /industries/                   /industries.html                   200
 
-# Redirect missing footer/utility pages
-/blog                          /portfolio.html                    302
-/blog/                         /portfolio.html                    302
+# Blog redirects
+/blog                          /latest/                           301
+/blog/                         /latest/                           301
 /privacy                       /contact.html                      302
 /privacy/                      /contact.html                      302
 /sitemap                       /                                  302

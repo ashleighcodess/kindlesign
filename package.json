@@ -1,0 +1,13 @@
+{
+  "name": "kindlesign-website",
+  "version": "1.0.0",
+  "description": "Kindle Sign Company website",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.0.0"
+  }
+}

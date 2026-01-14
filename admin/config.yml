@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Media files will be stored here
+media_folder: "images/blog"
+public_folder: "/images/blog"
+
+# Site URL for previews
+site_url: https://www.kindlesign.com
+display_url: https://www.kindlesign.com
+
+collections:
+  - name: "blog"
+    label: "Latest Posts"
+    folder: "blog/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text", hint: "Brief description shown on the blog listing page" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Author", name: "author", widget: "string", default: "Kindle Sign Team" }
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options:
+          - "Channel Letters"
+          - "Monument Signs"
+          - "LED Signs"
+          - "Vehicle Wraps"
+          - "Industry News"
+          - "Project Spotlight"
+          - "Tips & Advice"
+          - "Company News"
