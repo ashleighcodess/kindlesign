@@ -156,7 +156,8 @@
         .service-hero-text { font-size: 1.125rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 2rem; }
         .service-hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
         .service-hero-visual { position: relative; }
-        .service-hero-image { width: 100%; aspect-ratio: 4/3; background: var(--dark-2); border-radius: 24px; display: flex; align-items: center; justify-content: center; }
+        .service-hero-image { width: 100%; aspect-ratio: 4/3; background: var(--dark-2); border-radius: 24px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .service-hero-image img { width: 100%; height: 100%; object-fit: cover; }
         .service-hero-image svg { width: 120px; height: 120px; color: var(--primary); opacity: 0.3; }
         .service-hero-badge { position: absolute; bottom: -1rem; left: -1rem; background: var(--primary); color: var(--white); padding: 1rem 1.5rem; border-radius: 16px; font-weight: 700; box-shadow: 0 10px 40px rgba(232,93,4,0.4); }
 
@@ -301,6 +302,51 @@
         @media (max-width: 768px) {
             .nav-links, .nav-phone { display: none; }
             .mobile-toggle { display: flex; }
+
+            /* Mobile Menu Active State */
+            body.mobile-menu-active .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--dark);
+                z-index: 9998;
+                padding: 100px 2rem 2rem;
+                gap: 0;
+                overflow-y: auto;
+            }
+            body.mobile-menu-active .nav-links > li > a {
+                color: var(--white);
+                font-size: 1.25rem;
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            body.mobile-menu-active .nav-links > li:last-child > a { border-bottom: none; }
+            body.mobile-menu-active .nav-dropdown,
+            body.mobile-menu-active .nav-mega {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: rgba(255,255,255,0.05);
+                box-shadow: none;
+                padding: 0.5rem 1rem;
+                margin-top: 0;
+            }
+            body.mobile-menu-active .nav-mega { width: 100%; }
+            body.mobile-menu-active .nav-mega-grid { grid-template-columns: 1fr; gap: 1rem; }
+            body.mobile-menu-active .nav-dropdown a,
+            body.mobile-menu-active .nav-mega a { color: rgba(255,255,255,0.8); padding: 0.5rem 0; }
+            body.mobile-menu-active .mobile-toggle { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 9999; }
+            body.mobile-menu-active .mobile-toggle span { background: var(--white); }
+            body.mobile-menu-active .mobile-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            body.mobile-menu-active .mobile-toggle span:nth-child(2) { opacity: 0; }
+            body.mobile-menu-active .mobile-toggle span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+            body.mobile-menu-active { overflow: hidden; }
+
             .service-hero { padding: 8rem 0 4rem; }
             .types-grid, .benefits-visual, .related-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
@@ -452,7 +498,7 @@
                     </div>
                     <div class="service-hero-visual">
                         <div class="service-hero-image">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4v2H3V7z"/><path d="M5 9v9M19 9v9M3 18h18"/></svg>
+                            <img src="/images/ProjectPictures/amitythebotique.png" alt="Custom awning and canopy signage for business storefront">
                         </div>
                         <div class="service-hero-badge">Custom Branding</div>
                     </div>
@@ -748,6 +794,21 @@
                 var isActive = item.classList.contains('active');
                 document.querySelectorAll('.faq-item').forEach(function(faq) { faq.classList.remove('active'); });
                 if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Mobile menu toggle
+        var mobileToggle = document.querySelector('.mobile-toggle');
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                document.body.classList.toggle('mobile-menu-active');
+            });
+        }
+        // Close mobile menu when clicking a link
+        var mobileNavLinks = document.querySelectorAll('.nav-links a');
+        mobileNavLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.body.classList.remove('mobile-menu-active');
             });
         });
     </script>
