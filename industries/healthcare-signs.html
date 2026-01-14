@@ -249,8 +249,11 @@
         .header.scrolled .nav-phone { color: var(--dark); }
         .header.scrolled .mobile-toggle span { background: var(--dark); }
         .header-inner { display: flex; align-items: center; justify-content: space-between; }
-        .logo img { height: 36px; width: auto; filter: brightness(0) invert(1); transition: filter 0.3s; }
-        .header.scrolled .logo img { filter: none; }
+        .logo img { height: 36px; width: auto; }
+        .logo .logo-dark { display: none; }
+        .logo .logo-light { display: block; }
+        .header.scrolled .logo .logo-dark { display: block; }
+        .header.scrolled .logo .logo-light { display: none; }
         .nav { display: flex; align-items: center; gap: 1.5rem; }
         .nav-links { display: flex; gap: 0.25rem; list-style: none; }
         .nav-links > li { position: relative; }
