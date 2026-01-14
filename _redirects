@@ -43,4 +43,5 @@
 /portfolio                     /portfolio.html                    200
 /about                         /index.html                        200
 /contact                       /contact.html                      200
-/locations                     /index.html                        200
+/locations                     /locations/pennsylvania-signs.html 200
+/locations/                    /locations/pennsylvania-signs.html 200

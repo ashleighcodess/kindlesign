@@ -249,7 +249,7 @@
         .mobile-toggle span { width: 24px; height: 2px; background: var(--white); transition: background 0.3s; }
 
         /* Hero - Video Ready Full Width */
-        .hero { height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
+        .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: visible; }
         .hero-media { position: absolute; inset: 0; z-index: 0; }
         .hero-video, .hero-bg-image { width: 100%; height: 100%; object-fit: cover; }
         .hero-bg-image { display: block; }
@@ -260,8 +260,8 @@
         /* YouTube Video Background */
         .hero-video-container { position: absolute; inset: 0; overflow: hidden; }
         .hero-video-container iframe { position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.78vh; transform: translate(-50%, -50%); pointer-events: none; }
-        .hero-content-wrap { position: relative; z-index: 1; padding: 8rem 0 4rem; width: 100%; }
-        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero-content-wrap { position: relative; z-index: 1; padding: 12rem 0 4rem; width: 100%; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
         .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
         .hero-tag-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
@@ -279,8 +279,11 @@
         .hero-rating-stars svg { width: 16px; height: 16px; fill: #f59e0b; }
         .hero-rating-text { font-size: 0.875rem; font-weight: 600; color: var(--white); }
         
+        /* Hero Sidebar */
+        .hero-sidebar { display: flex; flex-direction: column; align-items: flex-end; gap: 1.5rem; padding-top: 2rem; }
+
         /* Hero Stats Card */
-        .hero-stats { display: flex; gap: 2rem; padding: 2rem; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; margin-top: 2rem; }
+        .hero-stats { display: flex; gap: 2rem; padding: 2rem; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; }
         .hero-stat { text-align: center; }
         .hero-stat-number { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
         .hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
@@ -577,6 +580,7 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-grid { grid-template-columns: 1fr; max-width: 600px; }
+            .hero-sidebar { align-items: flex-start; padding-top: 1rem; }
             .hero-stats { gap: 1.5rem; }
             .services-layout, .faq-grid, .cta-grid { grid-template-columns: 1fr; gap: 3rem; }
             .nav-mega { width: 90vw; left: 0; transform: translateY(10px); }
@@ -591,8 +595,9 @@
             .nav-links, .nav-phone { display: none; }
             .mobile-toggle { display: flex; }
             .hero { min-height: auto; }
-            .hero-content-wrap { padding: 7rem 0 4rem; }
-            .hero-stats { flex-direction: row; justify-content: space-between; padding: 1.5rem; }
+            .hero-content-wrap { padding: 8rem 0 3rem; }
+            .hero-sidebar { padding-top: 0; }
+            .hero-stats { flex-direction: row; justify-content: space-between; padding: 1.5rem; width: 100%; }
             .hero-stat-number { font-size: 1.5rem; }
             .hero-scroll { display: none; }
             .testimonials-grid, .stats-grid { grid-template-columns: 1fr; }
@@ -706,6 +711,8 @@
                                 <a href="/contact/" class="btn btn-primary">Get Free Quote</a>
                                 <a href="/portfolio/" class="btn btn-outline-white">View Our Work</a>
                             </div>
+                        </div>
+                        <div class="hero-sidebar">
                             <div class="hero-rating">
                                 <div class="hero-rating-stars">
                                     <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -716,7 +723,6 @@
                                 </div>
                                 <span class="hero-rating-text">4.9 Rating • Google Reviews</span>
                             </div>
-                            
                             <div class="hero-stats">
                                 <div class="hero-stat">
                                     <div class="hero-stat-number">500+</div>
