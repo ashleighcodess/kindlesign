@@ -251,7 +251,7 @@
         /* Hero - Video Ready Full Width */
         .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
         .hero-media { position: absolute; inset: 0; z-index: 0; }
-        .hero-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.4) 100%); }
+        .hero-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.4) 100%); pointer-events: none; z-index: 1; }
         .hero-video, .hero-bg-image { width: 100%; height: 100%; object-fit: cover; }
         .hero-bg-image { display: block; }
         .hero-video { display: none; }
@@ -259,6 +259,10 @@
         .hero-media.has-video .hero-bg-image { display: none; }
         .hero-image-placeholder { position: absolute; inset: 0; background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.15); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.2em; flex-direction: column; gap: 0.5rem; }
         .hero-image-placeholder svg { width: 48px; height: 48px; opacity: 0.3; }
+
+        /* YouTube Video Background */
+        .hero-video-container { position: absolute; inset: 0; overflow: hidden; }
+        .hero-video-container iframe { position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.78vh; transform: translate(-50%, -50%); pointer-events: none; }
         .hero-content-wrap { position: relative; z-index: 1; padding: 8rem 0 4rem; width: 100%; }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
@@ -684,19 +688,11 @@
     <main>
         <!-- Hero with Video/Image Background -->
         <section class="hero">
-            <!-- Background Media - Replace with video or image -->
+            <!-- Background Media - YouTube Video -->
             <div class="hero-media">
-                <!-- Option 1: Video (uncomment when you have video) -->
-                <!-- <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg">
-                    <source src="kindle-signs-showreel.mp4" type="video/mp4">
-                </video> -->
-                
-                <!-- Option 2: Image (current placeholder) -->
-                <div class="hero-image-placeholder">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-                    Replace with project photo or video
+                <div class="hero-video-container">
+                    <div id="heroVideo"></div>
                 </div>
-                <!-- When you have an image: <img class="hero-bg-image" src="hero-channel-letters.jpg" alt="Illuminated channel letters by Kindle Sign Company"> -->
             </div>
 
             <div class="hero-content-wrap">
@@ -899,7 +895,61 @@
         <div class="container"><div class="footer-bottom"><p class="footer-copyright">© 2025 Kindle Sign Company | 116 N Bellevue Ave Suite 306, Langhorne PA 19047 | <a href="/privacy/">Privacy</a> · <a href="/sitemap/">Sitemap</a></p><div class="footer-social"><a href="https://www.facebook.com/kindlesigncompany" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/kindlesigncompany" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a><a href="https://www.linkedin.com/company/kindle-sign-company" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/></svg></a></div></div></div>
     </footer>
 
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
+        // YouTube Video Background
+        var heroPlayer;
+        var videoStartTime = 191; // 3:11
+        var videoEndTime = 250;   // 4:10
+
+        function onYouTubeIframeAPIReady() {
+            heroPlayer = new YT.Player('heroVideo', {
+                videoId: 'A8BnkjDD-2k',
+                playerVars: {
+                    autoplay: 1,
+                    mute: 1,
+                    controls: 0,
+                    showinfo: 0,
+                    rel: 0,
+                    iv_load_policy: 3,
+                    modestbranding: 1,
+                    playsinline: 1,
+                    start: videoStartTime,
+                    disablekb: 1,
+                    fs: 0
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.seekTo(videoStartTime);
+            event.target.playVideo();
+            // Check time periodically to loop at end time
+            setInterval(checkVideoTime, 500);
+        }
+
+        function onPlayerStateChange(event) {
+            // If video ends, restart from start time
+            if (event.data === YT.PlayerState.ENDED) {
+                heroPlayer.seekTo(videoStartTime);
+                heroPlayer.playVideo();
+            }
+        }
+
+        function checkVideoTime() {
+            if (heroPlayer && heroPlayer.getCurrentTime) {
+                var currentTime = heroPlayer.getCurrentTime();
+                if (currentTime >= videoEndTime) {
+                    heroPlayer.seekTo(videoStartTime);
+                }
+            }
+        }
+
         // Preloader - with fallback
         function hidePreloader() {
             var p = document.getElementById('preloader');
