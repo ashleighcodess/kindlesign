@@ -173,8 +173,10 @@
             --font-body: 'DM Sans', sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); background: var(--white); color: var(--dark); line-height: 1.6; }
+        html { scroll-behavior: smooth; background: #000; }
+        body { font-family: var(--font-body); background: #000; color: var(--dark); line-height: 1.6; margin: 0; padding: 0; }
+        main { background: #000; display: block; }
+        section { margin: 0; padding: 0; }
         a { text-decoration: none; color: inherit; }
         img { max-width: 100%; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
@@ -249,7 +251,7 @@
         .mobile-toggle span { width: 24px; height: 2px; background: var(--white); transition: background 0.3s; }
 
         /* Hero - Video Ready Full Width */
-        .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: visible; }
+        .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; background: #000; margin: 0; }
         .hero-media { position: absolute; inset: 0; z-index: 0; }
         .hero-video, .hero-bg-image { width: 100%; height: 100%; object-fit: cover; }
         .hero-bg-image { display: block; }
@@ -258,43 +260,80 @@
         .hero-media.has-video .hero-bg-image { display: none; }
 
         /* YouTube Video Background */
-        .hero-video-container { position: absolute; inset: 0; overflow: hidden; }
-        .hero-video-container iframe { position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.78vh; transform: translate(-50%, -50%); pointer-events: none; }
-        .hero-content-wrap { position: relative; z-index: 1; padding: 12rem 0 4rem; width: 100%; }
-        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-        .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
-        .hero-tag-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: pulse 2s infinite; }
+        .hero-video-container { position: absolute; inset: 0; overflow: hidden; background: #000; }
+        #heroVideo, .hero-video-container iframe { position: absolute; top: 50%; left: 50%; width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.78vh; transform: translate(-50%, -50%); pointer-events: none; }
+        .hero-content-wrap { position: relative; z-index: 1; padding: 10rem 0 4rem; width: 100%; }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+
+        /* Hero Entry Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes fadeInScale { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        @keyframes glow { 0%, 100% { box-shadow: 0 0 20px rgba(232,93,4,0.4); } 50% { box-shadow: 0 0 35px rgba(232,93,4,0.7); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+        /* Hero elements - hidden initially */
+        .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .hero-tag-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: pulse 2s infinite; }
         .hero-tag-text { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; }
-        .hero-title { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.05; margin-bottom: 1.5rem; color: var(--white); }
-        .hero-title .highlight { color: var(--primary); }
-        .hero-description { font-size: 1.125rem; color: rgba(255,255,255,0.75); margin-bottom: 2rem; max-width: 500px; line-height: 1.7; }
-        .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        .btn-white { background: var(--white); color: var(--dark); }
-        .btn-white:hover { background: var(--light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        .btn-outline-white { background: transparent; border: 2px solid rgba(255,255,255,0.3); color: var(--white); }
-        .btn-outline-white:hover { background: var(--white); color: var(--dark); border-color: var(--white); }
-        .hero-rating { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.625rem 1.25rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; }
-        .hero-rating-stars { display: flex; gap: 2px; }
-        .hero-rating-stars svg { width: 16px; height: 16px; fill: #f59e0b; }
-        .hero-rating-text { font-size: 0.875rem; font-weight: 600; color: var(--white); }
-        
+        .hero-title { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.05; margin-bottom: 1.5rem; color: var(--white); opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s; }
+        .hero-title .highlight { color: var(--primary); display: inline-block; transition: transform 0.3s ease; }
+        .hero-title:hover .highlight { transform: scale(1.02); }
+        .hero-description { font-size: 1.125rem; color: rgba(255,255,255,0.75); max-width: 500px; line-height: 1.7; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s; }
+
         /* Hero Sidebar */
         .hero-sidebar { display: flex; flex-direction: column; align-items: flex-end; gap: 1.5rem; padding-top: 2rem; }
 
-        /* Hero Stats Card */
-        .hero-stats { display: flex; gap: 2rem; padding: 2rem; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; }
+        /* Hero Rating with animation */
+        .hero-rating { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.625rem 1.25rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; opacity: 0; transform: translateX(30px); transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s, background 0.3s ease; }
+        .hero-rating-stars { display: flex; gap: 2px; }
+        .hero-rating-stars svg { width: 16px; height: 16px; fill: #f59e0b; transition: transform 0.2s ease; }
+        .hero-rating-text { font-size: 0.875rem; font-weight: 600; color: var(--white); }
+
+        /* Hero Stats Card with animation */
+        .hero-stats { display: flex; gap: 2rem; padding: 2rem; background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; opacity: 0; transform: translateX(30px); transition: opacity 0.8s ease 0.35s, transform 0.8s ease 0.35s, background 0.3s ease; }
         .hero-stat { text-align: center; }
-        .hero-stat-number { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+        .hero-stat-number { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--primary); line-height: 1; transition: transform 0.3s ease; }
+        .hero-stat:hover .hero-stat-number { transform: scale(1.1); }
         .hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
-        
+
+        /* Hero CTA Buttons - moved to sidebar */
+        .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end; opacity: 0; transform: translateX(30px); transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s; }
+
+        /* Special Get Quote Button */
+        .btn-quote { position: relative; background: linear-gradient(135deg, var(--primary) 0%, #ff7b2e 100%); color: var(--white); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .btn-quote::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s ease; }
+        .btn-quote:hover::before { left: 100%; }
+        .btn-quote:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 40px rgba(232,93,4,0.5); }
+        .btn-quote svg { width: 18px; height: 18px; transition: transform 0.3s ease; }
+        .btn-quote:hover svg { transform: translateX(3px); }
+        .hero.animate .btn-quote { animation: glow 2s ease-in-out infinite; }
+
+        .btn-outline-white { background: transparent; border: 2px solid rgba(255,255,255,0.3); color: var(--white); transition: all 0.3s ease; }
+        .btn-outline-white:hover { background: var(--white); color: var(--dark); border-color: var(--white); transform: translateY(-2px); }
+
         /* Hero Scroll Indicator */
-        .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; z-index: 1; }
+        .hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.5); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; z-index: 1; opacity: 0; transition: opacity 0.8s ease 0.7s; }
         .hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent); animation: scrollDown 1.5s infinite; }
         @keyframes scrollDown { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
 
+        /* Animate hero elements when .animate class is added (after preloader) */
+        .hero.animate .hero-tag, .hero.animate .hero-title, .hero.animate .hero-description { opacity: 1; transform: translateY(0); }
+        .hero.animate .hero-rating, .hero.animate .hero-stats, .hero.animate .hero-cta { opacity: 1; transform: translateX(0); }
+        .hero.animate .hero-scroll { opacity: 1; }
+        .hero.animate .hero-rating:hover { transform: scale(1.05); }
+        .hero.animate .hero-stats:hover { transform: translateY(-5px); }
+        .hero.animate .hero-rating:hover .hero-rating-stars svg { animation: float 0.6s ease infinite; }
+        .hero.animate .hero-rating:hover .hero-rating-stars svg:nth-child(1) { animation-delay: 0s; }
+        .hero.animate .hero-rating:hover .hero-rating-stars svg:nth-child(2) { animation-delay: 0.1s; }
+        .hero.animate .hero-rating:hover .hero-rating-stars svg:nth-child(3) { animation-delay: 0.2s; }
+        .hero.animate .hero-rating:hover .hero-rating-stars svg:nth-child(4) { animation-delay: 0.3s; }
+        .hero.animate .hero-rating:hover .hero-rating-stars svg:nth-child(5) { animation-delay: 0.4s; }
+
         /* Services */
-        .services { padding: 6rem 0; background: var(--dark); }
+        .services { padding: 6rem 0; background: #000; margin: 0; }
         .services-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; }
         .services-intro h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
         .services-intro h2 span { color: var(--primary); }
@@ -594,12 +633,17 @@
         @media (max-width: 768px) {
             .nav-links, .nav-phone { display: none; }
             .mobile-toggle { display: flex; }
-            .hero { min-height: auto; }
-            .hero-content-wrap { padding: 8rem 0 3rem; }
-            .hero-sidebar { padding-top: 0; }
+            .hero { min-height: 100vh; }
+            .hero-content-wrap { padding: 7rem 0 3rem; }
+            .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero-sidebar { align-items: center; padding-top: 1rem; }
+            .hero-cta { justify-content: center; width: 100%; }
             .hero-stats { flex-direction: row; justify-content: space-between; padding: 1.5rem; width: 100%; }
             .hero-stat-number { font-size: 1.5rem; }
             .hero-scroll { display: none; }
+            .hero-content { text-align: center; }
+            .hero-description { margin: 0 auto 1rem; }
+            .hero-tag { justify-content: center; }
             .testimonials-grid, .stats-grid { grid-template-columns: 1fr; }
             .service-item { grid-template-columns: 50px 1fr 40px; gap: 1rem; }
             .service-icon { width: 50px; height: 50px; }
@@ -707,10 +751,6 @@
                             </div>
                             <h1 class="hero-title">East Coast<br><span class="highlight">Sign Experts.</span></h1>
                             <p class="hero-description">From concept to install, we deliver custom signage with exceptional customer experience and timely communication. Proudly serving Pennsylvania, New Jersey, Delaware, and Florida.</p>
-                            <div class="hero-cta">
-                                <a href="/contact/" class="btn btn-primary">Get Free Quote</a>
-                                <a href="/portfolio/" class="btn btn-outline-white">View Our Work</a>
-                            </div>
                         </div>
                         <div class="hero-sidebar">
                             <div class="hero-rating">
@@ -736,6 +776,10 @@
                                     <div class="hero-stat-number">4</div>
                                     <div class="hero-stat-label">States</div>
                                 </div>
+                            </div>
+                            <div class="hero-cta">
+                                <a href="/contact/" class="btn btn-quote">Get Free Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                                <a href="/portfolio/" class="btn btn-outline-white">View Our Work</a>
                             </div>
                         </div>
                     </div>
@@ -957,6 +1001,11 @@
         function hidePreloader() {
             var p = document.getElementById('preloader');
             if (p) p.classList.add('loaded');
+            // Trigger hero animations after preloader fades
+            setTimeout(function() {
+                var hero = document.querySelector('.hero');
+                if (hero) hero.classList.add('animate');
+            }, 300);
         }
         window.addEventListener('load', function() { setTimeout(hidePreloader, 1200); });
         setTimeout(hidePreloader, 3000);

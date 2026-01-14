@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Kindle Sign Company | Family-Owned Since 2005</title>
-    <meta name="description" content="Learn about Kindle Sign Company - a family-owned sign shop serving PA, NJ, DE & FL since 2005. We focus on customer experience and quality craftsmanship.">
+    <title>About Us | Kindle Sign Company | 3rd Generation Sign Makers</title>
+    <meta name="description" content="Kindle Sign Company is a 3rd generation sign company crafting signage that turns heads and tells your brand's story. Quality products and fantastic customer experience.">
     <link rel="canonical" href="https://www.kindlesign.com/about.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +81,7 @@
         .page-hero-tag-text { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; }
         .page-hero h1 { font-family: var(--font-heading); font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 1.5rem; }
         .page-hero h1 .highlight { color: var(--primary); }
-        .page-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; }
+        .page-hero p { font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 600px; line-height: 1.7; }
 
         /* About Content */
         .about-section { padding: 5rem 0; }
@@ -89,26 +89,38 @@
         .about-content h2 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--dark); margin-bottom: 1.5rem; }
         .about-content h2 span { color: var(--primary); }
         .about-content p { color: var(--gray); margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.0625rem; }
-        .about-image { background: var(--light); border-radius: 20px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
-        .about-image svg { width: 80px; height: 80px; color: var(--primary); opacity: 0.3; }
+        .about-images { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .about-image { border-radius: 16px; overflow: hidden; aspect-ratio: 1; }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; }
+        .about-image.large { grid-column: span 2; aspect-ratio: 2/1; }
 
-        /* Stats */
-        .stats-section { padding: 4rem 0; background: var(--light); }
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-        .stat-item { text-align: center; }
-        .stat-number { font-family: var(--font-heading); font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1; }
-        .stat-label { font-size: 1rem; color: var(--gray); margin-top: 0.5rem; }
+        /* Impact Section */
+        .impact-section { padding: 5rem 0; background: var(--light); }
+        .impact-section h2 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--dark); text-align: center; margin-bottom: 1rem; }
+        .impact-section h2 span { color: var(--primary); }
+        .impact-section > .container > p { text-align: center; color: var(--gray); max-width: 700px; margin: 0 auto 3rem; font-size: 1.125rem; }
+        .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; }
+        .impact-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: all 0.4s; }
+        .impact-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .impact-card-image { aspect-ratio: 4/3; overflow: hidden; }
+        .impact-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .impact-card:hover .impact-card-image img { transform: scale(1.05); }
+        .impact-card-content { padding: 1.5rem; text-align: center; }
+        .impact-card-content h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 0.75rem; }
+        .impact-card-content a { color: var(--primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .impact-card-content a svg { width: 16px; height: 16px; }
+        .impact-cta { text-align: center; }
+        .impact-cta p { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 1.5rem; }
 
-        /* Values */
-        .values-section { padding: 5rem 0; }
-        .values-section h2 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--dark); text-align: center; margin-bottom: 3rem; }
-        .values-section h2 span { color: var(--primary); }
-        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .value-card { padding: 2rem; background: var(--white); border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; }
-        .value-icon { width: 60px; height: 60px; background: rgba(232,93,4,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
-        .value-icon svg { width: 28px; height: 28px; color: var(--primary); }
-        .value-card h3 { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem; }
-        .value-card p { color: var(--gray); line-height: 1.7; }
+        /* Mission Section */
+        .mission-section { padding: 5rem 0; }
+        .mission-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
+        .mission-image { border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; }
+        .mission-image img { width: 100%; height: 100%; object-fit: cover; }
+        .mission-content h2 { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--dark); margin-bottom: 1.5rem; }
+        .mission-content h2 span { color: var(--primary); }
+        .mission-content p { color: var(--gray); line-height: 1.8; font-size: 1.125rem; margin-bottom: 2rem; }
+        .mission-tagline { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--primary); }
 
         /* CTA Section */
         .cta-banner { padding: 5rem 0; background: var(--primary); }
@@ -148,9 +160,8 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid, .mission-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .impact-grid { grid-template-columns: repeat(2, 1fr); }
             .nav-mega { width: 90vw; left: 0; transform: translateY(10px); }
             .nav-links > li:hover .nav-mega { transform: translateY(0); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
@@ -159,8 +170,9 @@
             .nav-links, .nav-phone { display: none; }
             .mobile-toggle { display: flex; }
             .page-hero { padding: 8rem 0 3rem; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .values-grid { grid-template-columns: 1fr; }
+            .impact-grid { grid-template-columns: 1fr; }
+            .about-images { grid-template-columns: 1fr; }
+            .about-image.large { grid-column: span 1; aspect-ratio: 16/9; }
             .cta-banner-inner { flex-direction: column; text-align: center; }
             .footer-grid { grid-template-columns: 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; }
@@ -243,94 +255,91 @@
                 <div class="page-hero-content">
                     <div class="page-hero-tag">
                         <span class="page-hero-tag-dot"></span>
-                        <span class="page-hero-tag-text">Family-Owned Since 2005</span>
+                        <span class="page-hero-tag-text">3rd Generation Sign Company</span>
                     </div>
-                    <h1>About <span class="highlight">Us.</span></h1>
-                    <p>We're a family-owned sign company dedicated to delivering exceptional signage with outstanding customer service.</p>
+                    <h1>Your Brand. <span class="highlight">Our Passion.</span></h1>
+                    <p>At Kindle Sign Company, we craft signage designs that turn heads and tell your brand's story. We are a 3rd generation sign company with a wealth of knowledge, knowhow, and passion for delivering not only quality, robust and durable products but a fantastic customer experience.</p>
                 </div>
             </div>
         </section>
 
-        <!-- About Content -->
+        <!-- Who We Are -->
         <section class="about-section">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-content">
-                        <h2>Your Partner in <span>Signage Solutions</span></h2>
-                        <p>Since 2005, Kindle Sign Company has been helping businesses across the East Coast make a lasting impression. What started as a small family operation has grown into a full-service sign shop serving Pennsylvania, New Jersey, Delaware, and Florida.</p>
-                        <p>We believe that great signage starts with great communication. That's why we focus on understanding your needs, keeping you informed throughout the process, and delivering results that exceed expectations.</p>
-                        <p>From the initial consultation to final installation, our team handles every aspect of your sign project with care and attention to detail. We're not just sign makers - we're your partners in building your brand's visibility.</p>
+                        <h2>Who <span>We Are</span></h2>
+                        <p>We're more than just sign makers—we're storytellers, problem-solvers, and brand builders. With a passion for creativity and precision, our team is dedicated to helping businesses stand out in a crowded world. Whether you're a local shop or a national brand, we treat every project with care, craftsmanship, and a drive to deliver results.</p>
+                        <p>We believe signage should do more than just mark a space—it should make a statement. That's why we combine industry expertise with a deep understanding of our clients' goals to create signage that's not only functional, but unforgettable.</p>
                     </div>
-                    <div class="about-image">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                    <div class="about-images">
+                        <div class="about-image">
+                            <img src="/images/ProjectPictures/Crust Pizza.png" alt="Crust Pizza Signage" loading="lazy">
+                        </div>
+                        <div class="about-image">
+                            <img src="/images/ProjectPictures/amitythebotique.png" alt="Amity Boutique Signage" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats -->
-        <section class="stats-section">
+        <!-- See the Impact -->
+        <section class="impact-section">
             <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">20+</div>
-                        <div class="stat-label">Years in Business</div>
+                <h2>See the Impact: <span>Real Results, Real Clients</span></h2>
+                <p>We don't just design signs—we build solutions that make a difference. Take a look at how our work has helped businesses elevate their visibility, boost foot traffic, and build stronger brands. From local storefronts to national rollouts, every project tells a story of transformation.</p>
+
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-card-image">
+                            <img src="/images/ProjectPictures/Burlington CoatFactory.png" alt="Burlington Coat Factory" loading="lazy">
+                        </div>
+                        <div class="impact-card-content">
+                            <h3>Burlington Coat Factory</h3>
+                            <a href="/portfolio.html">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Signs Installed</div>
+                    <div class="impact-card">
+                        <div class="impact-card-image">
+                            <img src="/images/ProjectPictures/Crust Pizza.png" alt="Crust Pizza" loading="lazy">
+                        </div>
+                        <div class="impact-card-content">
+                            <h3>Crust Pizza</h3>
+                            <a href="/portfolio.html">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4</div>
-                        <div class="stat-label">States Served</div>
+                    <div class="impact-card">
+                        <div class="impact-card-image">
+                            <img src="/images/ProjectPictures/dunkindonuts.png" alt="Dunkin'" loading="lazy">
+                        </div>
+                        <div class="impact-card-content">
+                            <h3>Dunkin'</h3>
+                            <a href="/portfolio.html">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4.9</div>
-                        <div class="stat-label">Google Rating</div>
-                    </div>
+                </div>
+
+                <div class="impact-cta">
+                    <p>Want to see how we can do the same for you?</p>
+                    <a href="/contact/" class="btn btn-primary">Book Your Consultation Today</a>
                 </div>
             </div>
         </section>
 
-        <!-- Values -->
-        <section class="values-section">
+        <!-- Our Mission -->
+        <section class="mission-section">
             <div class="container">
-                <h2>What Sets Us <span>Apart</span></h2>
-                <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.14.95.36 1.87.66 2.75a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.88.3 1.8.52 2.75.66A2 2 0 0122 16.92z"/></svg>
-                        </div>
-                        <h3>Communication First</h3>
-                        <p>We keep you informed at every step. You'll always know the status of your project and what to expect next.</p>
+                <div class="mission-grid">
+                    <div class="mission-image">
+                        <img src="/images/ProjectPictures/Burlington CoatFactory.png" alt="Burlington Coat Factory Sign" loading="lazy">
                     </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        </div>
-                        <h3>Quality Craftsmanship</h3>
-                        <p>We use premium materials and proven techniques to create signs that look great and last for years.</p>
+                    <div class="mission-content">
+                        <h2>Our <span>Mission</span></h2>
+                        <p>Helping business owners put their branding mark on the world—that's what drives us at Kindle Sign Company. Through bold, custom signage and a seamless design process, we bring your vision to life.</p>
+                        <p class="mission-tagline">Design Your Future With Us and make your brand impossible to miss.</p>
+                        <a href="/contact/" class="btn btn-primary">Contact Us to Book Your Consultation</a>
                     </div>
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                        </div>
-                        <h3>On-Time Delivery</h3>
-                        <p>We understand that timing matters. We work hard to meet your deadlines without compromising quality.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Banner -->
-        <section class="cta-banner">
-            <div class="container">
-                <div class="cta-banner-inner">
-                    <div class="cta-banner-content">
-                        <h2>Ready to Work Together?</h2>
-                        <p>Let's discuss your signage needs and create something great.</p>
-                    </div>
-                    <a href="/contact/" class="btn btn-white">Get in Touch</a>
                 </div>
             </div>
         </section>
@@ -339,12 +348,12 @@
     <footer class="footer">
         <div class="footer-areas"><div class="container"><div class="footer-areas-inner"><div class="footer-areas-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving</div><div class="footer-areas-list"><a href="/locations/pennsylvania-signs/" class="area-tag">Pennsylvania</a><a href="/locations/new-jersey-signs/" class="area-tag">New Jersey</a><a href="/locations/delaware-signs/" class="area-tag">Delaware</a><a href="/locations/florida-signs/" class="area-tag">Florida</a></div></div></div></div>
         <div class="footer-main"><div class="container"><div class="footer-grid">
-            <div class="footer-brand"><a href="/" class="logo"><img src="/images/kindle_print_edited.png" alt="Kindle Sign Company"></a><p>Family-owned sign company since 2005. We focus on customer experience and timely communication, delivering signage from concept to install.</p><div class="footer-contact"><a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a><a href="mailto:Sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Sales@kindlesign.com</a></div></div>
+            <div class="footer-brand"><a href="/" class="logo"><img src="/images/kindle_print_edited.png" alt="Kindle Sign Company"></a><p>3rd generation sign company with a wealth of knowledge, knowhow, and passion for delivering quality products and a fantastic customer experience.</p><div class="footer-contact"><a href="tel:866-358-9892"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.05 12.05 0 002.81.7A2 2 0 0122 16.92z"/></svg> 866-358-9892</a><a href="mailto:Sales@kindlesign.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Sales@kindlesign.com</a></div></div>
             <div class="footer-col"><h4>Services</h4><ul><li><a href="/services/channel-letters.html">Channel Letters</a></li><li><a href="/services/monument-signs.html">Monument Signs</a></li><li><a href="/services/pylon-signs.html">Pylon Signs</a></li><li><a href="/services/led-signs.html">LED Signs</a></li><li><a href="/services/awnings-canopies.html">Awnings</a></li><li><a href="/services/vehicle-wraps.html">Vehicle Wraps</a></li></ul></div>
             <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/locations/pennsylvania-signs/">Pennsylvania</a></li><li><a href="/locations/new-jersey-signs/">New Jersey</a></li><li><a href="/locations/delaware-signs/">Delaware</a></li><li><a href="/locations/florida-signs/">Florida</a></li></ul></div>
             <div class="footer-col"><h4>Company</h4><ul><li><a href="/about/">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/contact/">Contact</a></li></ul></div>
         </div></div></div>
-        <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 Kindle Sign Company</p><div class="footer-social"><a href="https://www.facebook.com/kindlesigncompany" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/kindlesigncompany" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a></div></div></div>
+        <div class="container"><div class="footer-bottom"><p class="footer-copyright">&copy; 2025 Kindle Sign Company | 116 N. Bellevue Ave. Langhorne, PA 19047</p><div class="footer-social"><a href="https://www.facebook.com/kindlesigncompany" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="https://www.instagram.com/kindlesigncompany" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></a></div></div></div>
     </footer>
 </body>
 </html>
