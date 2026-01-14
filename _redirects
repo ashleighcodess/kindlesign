@@ -51,3 +51,67 @@
 /locations/                    /locations/pennsylvania-signs.html 200
 /industries                    /industries.html                   200
 /industries/                   /industries.html                   200
+
+# Redirect missing footer/utility pages
+/blog                          /portfolio.html                    302
+/blog/                         /portfolio.html                    302
+/privacy                       /contact.html                      302
+/privacy/                      /contact.html                      302
+/sitemap                       /                                  302
+/sitemap/                      /                                  302
+/about/testimonials            /about.html                        302
+/about/testimonials/           /about.html                        302
+
+# PA county location redirects -> Pennsylvania page
+/locations/bucks-county-signs      /locations/pennsylvania-signs.html  302
+/locations/bucks-county-signs/     /locations/pennsylvania-signs.html  302
+/locations/montgomery-county-signs /locations/pennsylvania-signs.html  302
+/locations/montgomery-county-signs/ /locations/pennsylvania-signs.html 302
+/locations/chester-county-signs    /locations/pennsylvania-signs.html  302
+/locations/chester-county-signs/   /locations/pennsylvania-signs.html  302
+/locations/delaware-county-signs   /locations/pennsylvania-signs.html  302
+/locations/delaware-county-signs/  /locations/pennsylvania-signs.html  302
+/locations/berks-county-signs      /locations/pennsylvania-signs.html  302
+/locations/berks-county-signs/     /locations/pennsylvania-signs.html  302
+/locations/lehigh-county-signs     /locations/pennsylvania-signs.html  302
+/locations/lehigh-county-signs/    /locations/pennsylvania-signs.html  302
+/locations/northampton-county-signs  /locations/pennsylvania-signs.html 302
+/locations/northampton-county-signs/ /locations/pennsylvania-signs.html 302
+/locations/philadelphia-signs      /locations/pennsylvania-signs.html  302
+/locations/philadelphia-signs/     /locations/pennsylvania-signs.html  302
+/locations/langhorne-signs         /locations/pennsylvania-signs.html  302
+/locations/langhorne-signs/        /locations/pennsylvania-signs.html  302
+/locations/newtown-signs           /locations/pennsylvania-signs.html  302
+/locations/newtown-signs/          /locations/pennsylvania-signs.html  302
+/locations/doylestown-signs        /locations/pennsylvania-signs.html  302
+/locations/doylestown-signs/       /locations/pennsylvania-signs.html  302
+
+# Florida location redirects
+/locations/south-florida-signs     /locations/florida-signs.html       302
+/locations/south-florida-signs/    /locations/florida-signs.html       302
+
+# Missing service page redirects
+/services/backlit-signs        /services/led-signs.html           302
+/services/backlit-signs/       /services/led-signs.html           302
+/services/digital-signs        /services/led-signs.html           302
+/services/digital-signs/       /services/led-signs.html           302
+/services/lightbox-signs       /services/led-signs.html           302
+/services/lightbox-signs/      /services/led-signs.html           302
+/services/neon-signs           /services/channel-letters.html     302
+/services/neon-signs/          /services/channel-letters.html     302
+/services/dimensional-letters  /services/channel-letters.html     302
+/services/dimensional-letters/ /services/channel-letters.html     302
+/services/storefront-signs     /services/channel-letters.html     302
+/services/storefront-signs/    /services/channel-letters.html     302
+/services/office-signs         /services/monument-signs.html      302
+/services/office-signs/        /services/monument-signs.html      302
+/services/wayfinding-signs     /services/monument-signs.html      302
+/services/wayfinding-signs/    /services/monument-signs.html      302
+/services/property-signs       /services/monument-signs.html      302
+/services/property-signs/      /services/monument-signs.html      302
+/services/window-graphics      /services/vehicle-wraps.html       302
+/services/window-graphics/     /services/vehicle-wraps.html       302
+/services/custom-fabrication   /services.html                     302
+/services/custom-fabrication/  /services.html                     302
+/services/national-sign-programs  /services.html                  302
+/services/national-sign-programs/ /services.html                  302
