@@ -1537,15 +1537,11 @@
             var copyBtn = document.getElementById('copyCode');
             var popupShown = false;
 
-            // Check if popup was already shown in this session
-            var hasSeenPopup = sessionStorage.getItem('discountPopupSeen');
-
             function showPopup() {
-                if (!popupShown && !hasSeenPopup) {
+                if (!popupShown) {
                     popup.classList.add('active');
                     document.body.style.overflow = 'hidden';
                     popupShown = true;
-                    sessionStorage.setItem('discountPopupSeen', 'true');
                 }
             }
 
