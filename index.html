@@ -203,12 +203,12 @@
         .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
 
         /* Preloader */
-        .preloader { position: fixed; inset: 0; background: var(--dark); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem; transition: opacity 0.5s, visibility 0.5s; }
+        .preloader { position: fixed; inset: 0; background: var(--dark); z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.15rem; transition: opacity 0.5s, visibility 0.5s; }
         .preloader.loaded { opacity: 0; visibility: hidden; pointer-events: none; }
-        .preloader-main { display: flex; font-family: var(--font-heading); font-size: clamp(3rem, 8vw, 5rem); font-weight: 700; }
+        .preloader-main { display: flex; align-items: center; font-family: var(--font-heading); font-size: clamp(3rem, 8vw, 5rem); font-weight: 700; }
         .preloader-main span { color: var(--white); opacity: 0; transform: translateY(100%); animation: reveal 0.6s ease forwards; }
-        .preloader-main span.flame { color: var(--primary); }
-        .preloader-main span:nth-child(1) { animation-delay: 0.1s; }
+        .preloader-main .brandmark { width: clamp(2.5rem, 7vw, 4rem); height: clamp(2.5rem, 7vw, 4rem); opacity: 0; transform: translateY(100%); animation: reveal 0.6s ease forwards; margin-right: 0.25rem; }
+        .preloader-main .brandmark { animation-delay: 0.1s; }
         .preloader-main span:nth-child(2) { animation-delay: 0.15s; }
         .preloader-main span:nth-child(3) { animation-delay: 0.2s; }
         .preloader-main span:nth-child(4) { animation-delay: 0.25s; }
@@ -1049,7 +1049,7 @@
 </head>
 <body>
     <div class="preloader" id="preloader">
-        <div class="preloader-main"><span class="flame">K</span><span>i</span><span>n</span><span>d</span><span>l</span><span>e</span></div>
+        <div class="preloader-main"><img src="/images/brandmark.png" alt="" class="brandmark"><span>K</span><span>i</span><span>n</span><span>d</span><span>l</span><span>e</span></div>
         <div class="preloader-sub">SIGN COMPANY</div>
     </div>
 
