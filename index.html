@@ -311,7 +311,7 @@
 
         /* Hero elements - hidden initially */
         .hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .hero-tag-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; animation: pulse 2s infinite; }
+        .hero-tag-dot { width: 20px; height: 20px; background: url('/images/brandmark.png') center/contain no-repeat; animation: pulse 2s infinite; }
         .hero-tag-text { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.1em; }
         .hero-title { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.05; margin-bottom: 1.5rem; color: var(--white); opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s; }
         .hero-title .highlight { color: var(--primary); display: inline-block; transition: transform 0.3s ease; }
@@ -403,11 +403,46 @@
         .stat-number { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--white); line-height: 1; }
         .stat-label { font-size: 1rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem; }
 
+        /* Brandmark Divider */
+        .brandmark-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+            background: var(--white);
+        }
+        .brandmark-divider::before,
+        .brandmark-divider::after {
+            content: '';
+            flex: 1;
+            max-width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        .brandmark-divider img {
+            width: 40px;
+            height: 40px;
+            margin: 0 1.5rem;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        .brandmark-divider:hover img {
+            transform: scale(1.15) rotate(10deg);
+            opacity: 1;
+        }
+        .brandmark-divider.dark {
+            background: var(--dark);
+        }
+        .brandmark-divider.dark::before,
+        .brandmark-divider.dark::after {
+            background: linear-gradient(90deg, transparent, rgba(232,93,4,0.5), transparent);
+        }
+
         /* Work */
         .work { padding: 6rem 0; background: var(--light); }
         .section-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
         .section-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
-        .section-tag::before { content: ''; width: 8px; height: 8px; background: var(--primary); border-radius: 50%; }
+        .section-tag::before { content: ''; width: 16px; height: 16px; background: url('/images/brandmark.png') center/contain no-repeat; }
         .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; }
         .work-grid { display: grid; gap: 2rem; }
         .work-item { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: center; padding: 2rem; background: var(--white); border-radius: 20px; transition: all 0.3s; }
@@ -428,10 +463,11 @@
         .testimonials .section-title { color: var(--white); }
         .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         
-        .testimonial-card { 
-            background: var(--dark-2); 
-            border-radius: 20px; 
-            padding: 2rem; 
+        .testimonial-card {
+            background: var(--dark-2);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative; 
             border: 1px solid var(--dark-3); 
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             opacity: 0;
@@ -453,7 +489,22 @@
         .testimonial-card.animate-in:hover {
             transform: translateY(-8px);
         }
-        
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 32px;
+            height: 32px;
+            background: url('/images/brandmark.png') center/contain no-repeat;
+            opacity: 0.15;
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover::before {
+            opacity: 0.4;
+            transform: scale(1.1);
+        }
+
         .testimonial-stars { display: flex; gap: 3px; margin-bottom: 1rem; }
         .testimonial-stars svg { 
             width: 18px; 
@@ -644,7 +695,8 @@
         .footer-col li { margin-bottom: 0.5rem; }
         .footer-col a { font-size: 0.875rem; color: var(--gray); transition: color 0.2s; }
         .footer-col a:hover { color: var(--primary); }
-        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--dark-3); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom { padding: 1.5rem 0; border-top: 1px solid var(--dark-3); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; position: relative; }
+        .footer-bottom::before { content: ''; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); width: 24px; height: 24px; background: url('/images/brandmark.png') center/contain no-repeat, var(--black); padding: 4px; border-radius: 50%; }
         .footer-copyright { font-size: 0.875rem; color: var(--gray); }
         .footer-copyright a { color: var(--gray); }
         .footer-copyright a:hover { color: var(--primary); }
@@ -1179,6 +1231,10 @@
             </div>
         </section>
 
+        <div class="brandmark-divider">
+            <img src="/images/brandmark.png" alt="Kindle Sign">
+        </div>
+
         <section class="work" id="work">
             <div class="container">
                 <div class="section-header"><span class="section-tag">Portfolio</span><h2 class="section-title">Local Projects.</h2></div>
@@ -1204,6 +1260,10 @@
                 </div>
             </div>
         </section>
+
+        <div class="brandmark-divider dark">
+            <img src="/images/brandmark.png" alt="Kindle Sign">
+        </div>
 
         <section class="testimonials" id="testimonials">
             <div class="container">

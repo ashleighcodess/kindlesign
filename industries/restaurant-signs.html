@@ -329,7 +329,8 @@
         .industry-hero-badge { position: absolute; bottom: -1rem; left: -1rem; background: var(--primary); color: var(--white); padding: 1rem 1.5rem; border-radius: 16px; font-weight: 700; font-size: 1.125rem; box-shadow: 0 10px 40px rgba(232,93,4,0.4); }
 
         /* Section Styles */
-        .section-tag { display: inline-block; padding: 0.5rem 1rem; background: rgba(232,93,4,0.1); color: var(--primary); font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 100px; margin-bottom: 1rem; }
+        .section-tag { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(232,93,4,0.1); color: var(--primary); font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 100px; margin-bottom: 1rem; }
+        .section-tag::before { content: ''; width: 14px; height: 14px; background: url('/images/brandmark.png') center/contain no-repeat; }
         .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
         .section-subtitle { font-size: 1.125rem; color: var(--gray); max-width: 600px; }
 
