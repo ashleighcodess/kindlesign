@@ -266,8 +266,22 @@
         .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,93,4,0.3); }
         .btn-outline { background: transparent; border: 2px solid var(--dark); color: var(--dark); }
         .btn-outline:hover { background: var(--dark); color: var(--white); }
-        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--white); }
-        .nav-phone svg { width: 18px; height: 18px; color: var(--primary); }
+        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--white); transition: color 0.3s; }
+        .nav-phone svg { width: 18px; height: 18px; color: var(--primary); transition: transform 0.3s; }
+        .nav-phone:hover { color: var(--primary); }
+        .nav-phone:hover svg { animation: phone-ring 0.5s ease-in-out; }
+        @keyframes phone-ring {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(15deg); }
+            20% { transform: rotate(-15deg); }
+            30% { transform: rotate(15deg); }
+            40% { transform: rotate(-15deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(-10deg); }
+            70% { transform: rotate(5deg); }
+            80% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
         .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; }
         .mobile-toggle span { width: 24px; height: 2px; background: var(--white); transition: background 0.3s; }
 
